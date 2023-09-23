@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./base.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 3px;
+}
+
+.custom-scrollbar-h::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar-h::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar-h::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 3px;
+}
+
+.drop-cap::first-letter {
+  float: left;
+  line-height: 35px;
+  font-size: 55px;
+  font-family: Montserrat;
+  color: #1F96DB;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+.drop-cap-large::first-letter {
+  float: left;
+  line-height: 85px;
+  font-size: 100px;
+  font-family: Montserrat;
+  color: #1F96DB;
+  padding-bottom: 5px;
+  padding-right: 3px;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+.custom-leaf {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.custom-leaf::after {
+  content: '';
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(#1F96DB, rgba(0,0,0,0));
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -1;
+  transform: rotate(10deg);
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
