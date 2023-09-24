@@ -1,5 +1,6 @@
 import { BookIcon } from "@sanity/icons";
 import { defineType } from "sanity";
+import { format, parseISO } from 'date-fns'
 
 export default defineType({
   name: "article",
@@ -26,6 +27,12 @@ export default defineType({
       name: 'title',
       type: 'string',
       title: 'Title'
+    },
+    {
+      name: 'topic',
+      type: 'reference',
+      title: 'Topic',
+      to: [{ type: 'topic' }],
     },
     {
       name: 'seo',
@@ -59,6 +66,53 @@ export default defineType({
       title: 'Intro',
       type: 'text',
       rows: 3,
+    },
+    {
+      name: 'hasProductListing',
+      title: 'Has Product Listing',
+      type: 'boolean',
+      initialValue: false,
+    },
+    {
+      name: "products",
+      title: "Products",
+      hidden: ({ parent }) => !parent.hasProductListing,
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "name",
+              title: "Name",
+              type: "string",
+            },
+            {
+              name: "description",
+              title: "Description",
+              type: "text",
+              rows: 3,
+            },
+            {
+              name: "link",
+              title: "Link",
+              type: "url",
+            }
+          ],
+          preview: {
+            select: {
+              title: "name",
+              subtitle: "description",
+            },
+            prepare({ title, subtitle }) {
+              return {
+                title: title,
+                subtitle: subtitle,
+              }
+            }
+          }
+        }
+      ]
     },
     {
       name: 'subHeadings',
@@ -108,5 +162,32 @@ export default defineType({
         ],
       },
     },
-  ]
+    {
+      name: 'relatedArticles',
+      title: 'Related Articles',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'article' }],
+        },
+      ],
+      description: 'These articles will be displayed at the hero so make sure they are related to the topic of this article',
+    }
+
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      date: '_updatedAt',
+      media: 'seo.image',
+    },
+    prepare({ title, media, date }) {
+      const subtitles = [
+        date && `on ${format(parseISO(date), 'LLL d, yyyy')}`,
+      ].filter(Boolean)
+
+      return { title, media, subtitle: subtitles.join(' ') }
+    },
+  },
 })
