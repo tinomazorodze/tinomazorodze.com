@@ -1,10 +1,24 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+
 import { Inter } from 'next/font/google'
+import '@/styles/global.css';
+import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
+import { firePageView } from '@/lib/gtag';
+import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({
+  Component,
+  pageProps,
+}: {
+  Component: any;
+  pageProps: AppProps;
+}) {
+  useEffect(() => {
+    firePageView(window.location.pathname);
+  }, []);
+
   return (
     <>
       <style jsx global>{`
@@ -13,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <Component {...pageProps} />
+      <Analytics />
     </>
-  )
+  );
 }
