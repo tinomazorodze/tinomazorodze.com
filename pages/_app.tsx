@@ -1,6 +1,6 @@
 
 import { Inter } from 'next/font/google'
-import '@/styles/global.css';
+import '../styles/global.css';
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import { firePageView } from '@/lib/gtag';
