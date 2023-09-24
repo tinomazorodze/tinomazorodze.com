@@ -83,6 +83,10 @@ export default defineField({
     {
       name: 'blockPartnersCard',
       type: 'partnersCard.object',
+    },
+    {
+      name: 'blockProductSummary',
+      type: 'productSummary.object',
     }
   ],
 })
