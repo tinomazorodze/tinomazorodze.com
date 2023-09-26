@@ -1,7 +1,7 @@
 import { createClient } from 'next-sanity'
 
 import { apiVersion, dataset, projectId, useCdn } from '../env'
-import { allArticlesQuery, allTopicsQuery, articleBySlugQuery } from './queries'
+import { allArticlesQuery, allProjectsQuery, allTopicsQuery, articleBySlugQuery } from './queries'
 
 const client = createClient({
   apiVersion,
@@ -29,6 +29,13 @@ export async function getArticleBySlug(slug: string): Promise<any> {
 export async function getAllTopics(): Promise<any> {
   if (client) {
     return (await client.fetch(allTopicsQuery)) || {}
+  }
+  return {}
+}
+
+export async function getAllProjects(): Promise<any> {
+  if (client) {
+    return (await client.fetch(allProjectsQuery)) || {}
   }
   return {}
 }
