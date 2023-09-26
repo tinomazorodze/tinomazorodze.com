@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@sanity/dashboard": "^3.1.5",
     "@sanity/icons": "^2.4.1",
@@ -32,6 +33,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-merge-refs": "^2.0.2",
+    "react-portable-text": "^0.6.0",
     "react-router-dom": "^6.16.0",
     "sanity": "^3.16.7",
     "sanity-plugin-media": "^2.2.2",

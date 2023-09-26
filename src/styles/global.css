@@ -81,3 +81,20 @@ html {
   border-bottom-right-radius: 35px;
 }
 
+.active {
+  position: relative;
+  z-index: 1;
+  color: #1F96DB;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  width: full;
+  height: 5px;
+  border-radius: 3px 3px 0 0;
+  background: #1F96DB;
+}

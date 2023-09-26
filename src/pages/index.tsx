@@ -23,7 +23,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 right-0 w-full h-full grid place-content-center">
                 <div className="text-center text-white px-4">
                   <h1 className="text-5xl mb-4">Need Professional Business IT Services?</h1>
-                  <p className="mb-6 text-lg">Tino helps transform old school businesses into next generation organisations.</p>
+                  <p className="mb-6 text-lg">Tino helps transform old school Zimbabwean businesses into next generation organisations.</p>
                   <div className='flex space-x-4 mx-auto w-fit'>
                     <Link href="/portfolio" className="px-4 py-3 border border-white hover:border-primaryColor hover:text-primaryColor rounded-md">View Portfolio</Link>
                     <Link href="https://tinomazorodze.youcanbook.me/" rel="nofollow" target="_blank" className="px-4 py-3 bg-gradient-to-tr hover:bg-gradient-to-tl from-secondaryColor via-primaryColor to-secondaryColor rounded-md">Book a Meeting</Link>
@@ -48,14 +48,14 @@ export default function Home() {
                     </div>
                   </li>
                   <li className="md:bg-transparent bg-accent-2 p-4 md:p-0 rounded-lg">
-                    <h3 className="text-xl text-center md:text-left text-primaryColor mb-4">Business Infrustructure Development</h3>
+                    <h3 className="text-xl text-center md:text-left text-primaryColor mb-4">Business IT Infrustructure Development</h3>
                     <div className="flex space-x-4 flex-col md:flex-row items-center">
                       <div className="w-10 h-10 grid place-content-center border border-primaryColor rounded-md mb-4 md:mb-0"><WrenchScrewdriverIcon className="h-6 w-6 text-primaryColor" /></div>
                       <p className="w-full max-w-[400px] text-center md:text-left">Infrastructure is a key contributer to business growth and Tino can help you do it the right way</p>
                     </div>
                   </li>
                   <li className="md:bg-transparent bg-accent-2 p-4 md:p-0 rounded-lg">
-                    <h3 className="text-xl text-center md:text-left text-primaryColor mb-4">SEO, SEM & Digital Marketing</h3>
+                    <h3 className="text-xl text-center md:text-left text-primaryColor mb-4">Clean SEO, SEM & Digital Marketing</h3>
                     <div className="flex space-x-4 flex-col md:flex-row items-center">
                       <div className="w-10 h-10 grid place-content-center border border-primaryColor rounded-md mb-4 md:mb-0"><MegaphoneIcon className="h-6 w-6 text-primaryColor" /></div>
                       <p className="w-full max-w-[400px] text-center md:text-left">Among other Marketing Methods Tino can help you with Search Engine Marketing and Optimization</p>

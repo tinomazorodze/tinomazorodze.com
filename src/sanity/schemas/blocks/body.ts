@@ -1,6 +1,6 @@
 import FormatColor from '@/components/icons/format-color'
 import gradientText from '@/sanity/components/gradient-text'
-import { CheckmarkCircleIcon, CloseCircleIcon, HelpCircleIcon, ImageIcon } from '@sanity/icons'
+import { CheckmarkCircleIcon, CloseCircleIcon, HelpCircleIcon, ImageIcon, ThListIcon } from '@sanity/icons'
 import { defineField } from 'sanity'
 
 export default defineField({
@@ -40,9 +40,20 @@ export default defineField({
           },
         ],
         annotations: [
+          // Internal link
           {
-            name: 'link',
-            type: 'link.annotation',
+            name: 'annotationLinkInternal',
+            type: 'annotationLinkInternal',
+          },
+          // URL
+          {
+            name: 'annotationLinkExternal',
+            type: 'annotationLinkExternal',
+          },
+          // Email
+          {
+            name: 'annotationLinkEmail',
+            type: 'annotationLinkEmail',
           },
         ],
       },
@@ -60,6 +71,11 @@ export default defineField({
       name: 'blockFAQs',
       type: 'faqs.object',
       icon: HelpCircleIcon,
+    },
+    {
+      name: 'blockTable',
+      type: 'table.object',
+      icon: ThListIcon,
     },
     {
       name: 'blockProsCard',

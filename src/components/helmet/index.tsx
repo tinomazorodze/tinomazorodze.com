@@ -48,7 +48,7 @@ const Helmet = (props: HelmetProps) => {
         {/* Open Graph Meta Tags */}
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content={siteConfig.organisation.name} />
+        <meta property="og:site_name" content={siteConfig.owner.name} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={siteConfig.url.banner} />
