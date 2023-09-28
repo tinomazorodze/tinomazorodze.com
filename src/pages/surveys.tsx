@@ -7,7 +7,7 @@ export default function Home() {
       <Helmet
         metaTitle='The Safest and Fastest Way to make $10 in Zimbabwe'
         metaDescription='Tino will pay you to complete microtasks such as answering simple questions , doing research and more.'
-        pageUrl='https://tinomazorodze.com'
+        pageUrl='https://tinomazorodze.com/surveys'
       />
       <BaseLayout>
         <section id="hero" className='container mx-auto w-full px-4 text-center py-16'>

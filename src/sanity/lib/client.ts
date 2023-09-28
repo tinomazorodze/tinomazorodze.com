@@ -2,6 +2,16 @@ import { createClient } from 'next-sanity'
 
 import { apiVersion, dataset, projectId, useCdn } from '../env'
 import { allArticlesQuery, allProjectsQuery, allTopicsQuery, articleBySlugQuery } from './queries'
+import { SanityClient } from 'sanity'
+
+export function getClient(): SanityClient {
+  return createClient({
+    apiVersion,
+    dataset,
+    projectId,
+    useCdn,
+  })
+}
 
 const client = createClient({
   apiVersion,
