@@ -40,6 +40,7 @@ const createSitemap = (locations: SitemapLocation[]) => {
       .map((location) => {
         return `<url>
                     <loc>${baseUrl}${location.url}</loc>
+                    <changefreq>${location.changefreq}</changefreq>
                     <priority>${location.priority}</priority>
                     ${location.lastmod
             ? `<lastmod>${location.lastmod.toISOString()}</lastmod>`
@@ -65,6 +66,7 @@ export async function getServerSideProps({ res }: { res: any }) {
       return {
         url: `/blog/${article.slug.current}`,
         priority: 1,
+        changefreq: 'monthly',
         lastmod: new Date(article._updatedAt),
       }
     })
