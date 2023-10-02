@@ -26,7 +26,7 @@ export default function Hero({
           />
           <div>
             <div className='space-x-1 divide-x'>
-              <div onClick={() => (window.open(`https://tinomazorodze.com`, "_blank"))}>
+              <div onClick={() => (window.open(`https://www.tinomazorodze.com`, "_blank"))}>
                 By <span className='underline cursor-pointer'>Tino Mazorodze</span>
               </div>
             </div>

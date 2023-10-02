@@ -45,7 +45,7 @@ export default function Portfolio(props: PortfolioProps) {
       <Helmet
         metaTitle='Tino Mazorodze Portfolio | Client Work'
         metaDescription='An overview of testimonials, case studies and client work by Tino Mazorodze'
-        pageUrl='https://tinomazorodze.com/portfolio'
+        pageUrl='https://www.tinomazorodze.com/portfolio'
       />
       <BaseLayout>
         <main className="py-16 bg-accent-2">

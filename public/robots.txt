@@ -1,5 +1,5 @@
 # www.robotstxt.org
 
-Sitemap: https://tinomazorodze.com/sitemap.xml
+Sitemap: https://www.tinomazorodze.com/Sitemap.xml
 
 User-Agent: *

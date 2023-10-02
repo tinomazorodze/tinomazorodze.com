@@ -10,7 +10,7 @@ export default function Home() {
       <Helmet
         metaTitle='Tino Mazorodze | Software Architect'
         metaDescription='Tino Mazorodze is a Software Architect and Business Consultant based in Harare, Zimbabwe. He helps businesses grow by leveraging technology.'
-        pageUrl='https://tinomazorodze.com'
+        pageUrl='https://www.tinomazorodze.com'
       />
       <BaseLayout>
         <section id='hero'>
@@ -26,7 +26,7 @@ export default function Home() {
                   <p className="mb-6 text-lg">Tino helps transform old school Zimbabwean businesses into next generation organisations.</p>
                   <div className='flex space-x-4 mx-auto w-fit'>
                     <Link href="/portfolio" className="px-4 py-3 border border-white hover:border-primaryColor hover:text-primaryColor rounded-md">View Portfolio</Link>
-                    <Link href="https://tinomazorodze.youcanbook.me/" rel="nofollow" target="_blank" className="px-4 py-3 bg-gradient-to-tr hover:bg-gradient-to-tl from-secondaryColor via-primaryColor to-secondaryColor rounded-md">Book a Meeting</Link>
+                    <Link href="https://www.tinomazorodze.youcanbook.me/" rel="nofollow" target="_blank" className="px-4 py-3 bg-gradient-to-tr hover:bg-gradient-to-tl from-secondaryColor via-primaryColor to-secondaryColor rounded-md">Book a Meeting</Link>
                   </div>
                 </div>
               </div>

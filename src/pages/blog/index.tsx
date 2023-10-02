@@ -19,7 +19,7 @@ export default function Blog(props: BlogProps) {
       <Helmet
         metaTitle='Guides, Tutorials and Articles By Tino Mazorodze'
         metaDescription='A list of all the guides, tips and tricks articles written by Tino Mazorodze.'
-        pageUrl='https://tinomazorodze.com/blog'
+        pageUrl='https://www.tinomazorodze.com/blog'
       />
       <BaseLayout>
         <main className="container mx-auto px-4 md:px-0 w-full py-16">
