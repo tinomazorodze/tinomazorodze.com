@@ -13,6 +13,7 @@ import blockGreenCard from "./pt-components/green-card";
 import blockPartnersCard from "./pt-components/partners-card";
 import blockProductSummary from "./pt-components/product-summary";
 import blockTable from "./pt-components/table";
+import blockButtonCta from "./pt-components/button-cta";
 
 const PtComponents = (articles: any) => {
   return {
@@ -23,6 +24,7 @@ const PtComponents = (articles: any) => {
     blockPartnersCard,
     blockTable,
     blockProductSummary,
+    blockButtonCta,
     gradientText: gradientText,
     blockFAQs: (props: any) => faqsComponent(props, articles),
     normal: P,

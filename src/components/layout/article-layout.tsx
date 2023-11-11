@@ -10,6 +10,7 @@ import HeroImage from './article-components/hero-image';
 import TblContents from './article-components/tbl-contents';
 import PtRenderer from '../pt-renderer';
 import SideBar from './article-components/side-bar';
+import Products from './article-components/products';
 
 type BaseLayoutProps = {
   articles: MiniArticleType[];
@@ -21,11 +22,14 @@ export default function ArticleLayout(props: BaseLayoutProps) {
   const { articles, article, topic } = props;
   return (
     <ThemeProvider>
-      <Banner />
+      {/* <Banner /> */}
       <Header />
       <BreadCrumb article={article} />
       <Hero article={article} />
       <div className="container mx-auto w-full pb-6 px-4 md:px-0">
+        {article.hasProductListing && (
+          <Products article={article} />
+        )}
         <div className="grid-cols-[100%] grid min-w-full md:grid-cols-[72%_28%]">
           <div className="md:pr-6">
             <HeroImage alt={`${article.name} | OWH`} image={article.seo.image} />

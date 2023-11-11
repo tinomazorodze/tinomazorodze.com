@@ -12,7 +12,7 @@ const faqsComponent = (props: any, articles: ArticleType[]) => {
       <div className="">
         <div className="mb-5">
           <div className="text-2xl flex items-center">
-            <QuestionMarkCircleIcon className="h-8 w-8 mr-2 text-primaryColor" />
+            <QuestionMarkCircleIcon className="h-3 w-3 md:h-8 md:w-8 mr-2 text-primaryColor" />
             <h2>{title}</h2>
           </div>
         </div>

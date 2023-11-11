@@ -74,6 +74,20 @@ export default defineType({
       initialValue: false,
     },
     {
+      name: 'optimizeFor',
+      title: 'Optimize For',
+      type: 'string',
+      options: {
+        layout: 'radio',
+        direction: 'horizontal',
+        list: [
+          { title: 'Reading', value: 'reading' },
+          { title: 'Link Click', value: 'linkClick' },
+          { title: 'Both', value: 'both' },
+        ],
+      },
+    },
+    {
       name: "products",
       title: "Products",
       hidden: ({ parent }) => !parent.hasProductListing,
@@ -94,20 +108,39 @@ export default defineType({
               rows: 3,
             },
             {
+              name: "image",
+              title: "Image",
+              type: "image",
+            },
+            {
               name: "link",
               title: "Link",
-              type: "url",
+              type: "object",
+              fields: [
+                {
+                  name: "url",
+                  title: "URL",
+                  type: "url",
+                },
+                {
+                  name: "dofollow",
+                  title: "Dofollow",
+                  type: "boolean",
+                }
+              ]
             }
           ],
           preview: {
             select: {
               title: "name",
               subtitle: "description",
+              media: "image",
             },
-            prepare({ title, subtitle }) {
+            prepare({ title, subtitle, media }) {
               return {
                 title: title,
                 subtitle: subtitle,
+                media: media,
               }
             }
           }

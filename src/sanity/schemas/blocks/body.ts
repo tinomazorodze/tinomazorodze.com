@@ -103,6 +103,10 @@ export default defineField({
     {
       name: 'blockProductSummary',
       type: 'productSummary.object',
+    },
+    {
+      name: 'blockButtonCta',
+      type: "buttonCta.object",
     }
   ],
 })

@@ -7,11 +7,6 @@ export default defineField({
   type: 'object',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    },
-    {
       name: 'pros',
       title: 'Pros',
       type: 'array',
@@ -20,13 +15,12 @@ export default defineField({
   ],
   preview: {
     select: {
-      title: 'title',
       pros: 'pros',
     },
     prepare(selection) {
-      const { title, pros } = selection;
+      const { pros } = selection;
       return {
-        title,
+        title: "Advantages",
         subtitle: `${pros.length} pros`,
         media: ShieldCheckIcon,
       };

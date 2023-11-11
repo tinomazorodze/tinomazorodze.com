@@ -5,6 +5,7 @@ import body from "./blocks/body";
 import article from "./documents/article";
 import project from "./documents/project";
 import topic from "./documents/topic";
+import buttonCta from "./objects/button-cta";
 import consCard from "./objects/cons-card";
 import faqs from "./objects/faqs";
 import questionSchema from "./objects/faqs/question-schema";
@@ -21,6 +22,6 @@ const blocks = [body];
 
 const documents = [article, project, topic];
 
-const objects = [faqs, consCard, prosCard, greenCard, image, partnersCard, questionSchema, productSummary, table]
+const objects = [faqs, consCard, prosCard, greenCard, image, partnersCard, questionSchema, productSummary, table, buttonCta]
 
 export const schemaTypes = [...documents, ...objects, ...annotations, ...blocks]

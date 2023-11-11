@@ -9,6 +9,21 @@ export type ArticleType = {
     current: string;
   };
   title: string;
+  hasProductListing: boolean;
+  optimizeFor: "reading" | "linkClick" | "both";
+  products?: {
+    name: string;
+    description: string;
+    image: {
+      asset: {
+        _ref: string;
+      };
+    };
+    link: {
+      url: string;
+      dofollow: boolean;
+    };
+  }[];
   topic: {
     _ref: string;
   };

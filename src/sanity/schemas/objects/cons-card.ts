@@ -7,11 +7,6 @@ export default defineField({
   type: 'object',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    },
-    {
       name: 'cons',
       title: 'Cons',
       type: 'array',
@@ -20,13 +15,12 @@ export default defineField({
   ],
   preview: {
     select: {
-      title: 'title',
       cons: 'cons',
     },
     prepare(selection) {
-      const { title, cons } = selection;
+      const { cons } = selection;
       return {
-        title,
+        title: "Disadvantages",
         subtitle: `${cons.length} cons`,
         media: ShieldExclamationIcon,
       };
