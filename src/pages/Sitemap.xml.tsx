@@ -20,16 +20,16 @@ const defaultUrls: SitemapLocation[] = [
   {
     url: '/',
     changefreq: 'monthly',
-    priority: 0.9,
+    priority: 1.0,
     lastmod: new Date('2023-09-28T08:30:42.842Z'),
   },
   {
     url: '/blog',
-    changefreq: 'daily',
-    priority: 0.9,
+    changefreq: 'weekly',
+    priority: 1.0,
     lastmod: new Date(),
   },
-  { url: '/surveys', changefreq: 'weekly', priority: 0.5 },
+  { url: '/portfolio', changefreq: 'monthly', priority: 1.0 },
 ]
 
 const createSitemap = (locations: SitemapLocation[]) => {
@@ -65,7 +65,7 @@ export async function getServerSideProps({ res }: { res: any }) {
     .map((article) => {
       return {
         url: `/blog/${article.slug.current}`,
-        priority: 1,
+        priority: 0.9,
         changefreq: 'monthly',
         lastmod: new Date(article._updatedAt),
       }
