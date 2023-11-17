@@ -52,7 +52,10 @@ export type ArticleType = {
 export type MiniArticleType = {
   _id: string;
   title: string;
-  slug: string;
+  slug: {
+    _type: "slug";
+    current: string;
+  }
   topicRef: string;
   _updatedAt: string;
   seo: {

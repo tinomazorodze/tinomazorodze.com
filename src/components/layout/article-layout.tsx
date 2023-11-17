@@ -11,6 +11,7 @@ import TblContents from './article-components/tbl-contents';
 import PtRenderer from '../pt-renderer';
 import SideBar from './article-components/side-bar';
 import Products from './article-components/products';
+import RelatedArticles from './article-components/related-articles';
 
 type BaseLayoutProps = {
   articles: MiniArticleType[];
@@ -43,6 +44,7 @@ export default function ArticleLayout(props: BaseLayoutProps) {
             <SideBar article={article} />
           </div>
         </div>
+        <RelatedArticles article={article} articles={articles} />
       </div>
       <ScrollTop />
       <Footer />
