@@ -29,7 +29,7 @@ const defaultUrls: SitemapLocation[] = [
     priority: 1.0,
     lastmod: new Date(),
   },
-  { url: '/portfolio', changefreq: 'monthly', priority: 1.0 },
+  { url: '/projects', changefreq: 'weekly', priority: 1.0 },
 ]
 
 const createSitemap = (locations: SitemapLocation[]) => {

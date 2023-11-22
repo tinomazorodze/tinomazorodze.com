@@ -7,7 +7,7 @@ export default function Header() {
   const { pathname } = router;
   const isRoot = pathname === '/';
   const isBlog = pathname.startsWith('/blog');
-  const isPortfolio = pathname === '/portfolio';
+  const isProjects = pathname === '/projects';
 
   return (
     <header className="w-full sticky top-0 z-10 bg-primary border-b border-accent-2 shadow-sm">
@@ -15,7 +15,7 @@ export default function Header() {
         <nav className="flex space-x-4 text-accent-6">
           <Link href="/" className={`${isRoot && "active"}`}>Home</Link>
           <Link href="/blog" className={`${isBlog && "active"}`}>Blog</Link>
-          <Link href="/portfolio" className={`${isPortfolio && "active"}`}>Portfolio</Link>
+          <Link href="/projects" className={`${isProjects && "active"}`}>Projects</Link>
         </nav>
         <ThemeSwitcher />
       </div>
