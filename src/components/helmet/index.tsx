@@ -40,7 +40,7 @@ const Helmet = (props: HelmetProps) => {
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#000000" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content={`${siteConfig.url.web}/robots.txt`} />
+        <meta name="robots" content="/robots.txt" />
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="description" content={metaDescription} />
         <title>{metaTitle}</title>
@@ -90,15 +90,9 @@ const Helmet = (props: HelmetProps) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@MazorodzeHQ" />
         <meta name="twitter:creator" content="@MazorodzeHQ" />
-        <meta name="twitter:title" content="Tino Mazorodze" />
-        <meta name="twitter:description" content={siteConfig.description} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={siteConfig.url.banner} />
-        <meta name="twitter:image" content={siteConfig.url.banner} />
-        <meta
-          name="twitter:site"
-          content={`@MazorodzeHQ}`}
-        />
-        <meta name="twitter:card" content="summary_large_image" />
 
         <script
           key="organization-structured-data"
