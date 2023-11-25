@@ -30,7 +30,7 @@ export default function Blog(props: BlogProps) {
                 <li key={article._id}>
                   <Link href={`/blog/${article.slug.current}`} className="flex flex-col md:flex-row items-center mb-4 bg-accent-2 p-2 rounded-md w-fit">
                     <Image src={urlForImage(article.seo.image).width(150).height(90).url()}
-                      alt={`${article.seo.title} | Wealth Hub`} height={90} width={150} className="mr-2 rounded-md mb-4 md:mb-0" />
+                      alt={`${article.seo.title} | Tino Mazorodze`} height={90} width={150} className="mr-2 rounded-md mb-4 md:mb-0" />
                     <div>
                       <div className="text-lg max-w-[340px] line-clamp-2 text-center md:text-left">{article.seo.title}</div>
                       <div className="text-accent-5 mb-2 text-sm text-center md:text-left">{formatDate(

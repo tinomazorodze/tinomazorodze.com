@@ -42,7 +42,7 @@ function annotationLinkInternal(props: any, articles: ArticleType[]) {
             <span className="block">
               <Image
                 src={urlForImage(article.seo.image).width(280).height(158).url()}
-                alt={`${article.name} - Wealth Hub`}
+                alt={`${article.name} - Tino Mazorodze`}
                 className="h-auto w-full rounded-t-lg"
                 loading="eager"
                 title={article.name}

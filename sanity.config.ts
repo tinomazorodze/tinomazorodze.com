@@ -24,7 +24,7 @@ import { vercelDeployTool } from "sanity-plugin-vercel-deploy";
 
 export default defineConfig({
   basePath: "/studio",
-  title: "OWH Content Studio",
+  title: "Content Studio",
   projectId,
   dataset,
 

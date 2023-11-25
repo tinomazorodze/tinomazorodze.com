@@ -33,7 +33,7 @@ export default function ArticleLayout(props: BaseLayoutProps) {
         )}
         <div className="grid-cols-[100%] grid min-w-full md:grid-cols-[72%_28%]">
           <div className="md:pr-6">
-            <HeroImage alt={`${article.name} | OWH`} image={article.seo.image} />
+            <HeroImage alt={`${article.name} | Tino Mazorodze`} image={article.seo.image} />
             <div className="block md:hidden">
               <TblContents article={article} />
             </div>

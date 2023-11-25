@@ -65,7 +65,7 @@ export default function Home() {
                 <Link href="mailto:tino@tinomazorodze.com" rel="nofollow" className="bg-gradient-to-tr hover:bg-gradient-to-tl from-secondaryColor via-primaryColor to-secondaryColor text-white px-6 py-3 rounded-md flex items-center gap-4 w-fit mx-auto">Contact Tino <PaperAirplaneIcon className="h-4" /></Link>
               </div>
               <div className="h-[250px] md:h-[450px] w-full max-w-[350px] relative mb-6 md:mb-0">
-                <Image src="/content/main.webp" height={720} width={1280} alt="Wealth Hub Business Guides"
+                <Image src="/content/main.webp" height={720} width={1280} alt="Tino Mazorodze Coding"
                   className="w-full h-full object-cover rounded-lg"
                 />
                 <div className="absolute top-0 left-0 right-0 w-full h-full bg-gradient-to-t from-primaryColor to-transparent rounded-lg"></div>
