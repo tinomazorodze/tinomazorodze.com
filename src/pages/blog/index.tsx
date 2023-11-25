@@ -17,13 +17,13 @@ export default function Blog(props: BlogProps) {
   return (
     <>
       <Helmet
-        metaTitle='Guides, Tutorials and Articles By Tino Mazorodze'
-        metaDescription='A list of all the guides, tips and tricks articles written by Tino Mazorodze.'
+        metaTitle='Tino&#39;s Coding Blog | Web & Android Development'
+        metaDescription='Learn full stack web and android app development from Tino&#39;s Coding Blog.'
         pageUrl='https://www.tinomazorodze.com/blog'
       />
       <BaseLayout>
         <main className="container mx-auto px-4 md:px-0 w-full py-16">
-          <h1 className="text-4xl mb-10">All Articles By Tino</h1>
+          <h1 className="text-4xl mb-10">Tino&#39;s Coding Blog </h1>
           <ul>
             {articles
               .map((article: ArticleType) => (
