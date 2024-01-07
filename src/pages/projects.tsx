@@ -43,13 +43,13 @@ export default function Projects(props: ProjectsProps) {
   return (
     <>
       <Helmet
-        metaTitle='Tino Mazorodze Open Source Projects + Premium'
-        metaDescription='A listing of all free and premium open source projects by Tino Mazorodze.'
+        metaTitle='Tino Mazorodze - Portfolio'
+        metaDescription='25+ Successful Business Projects and Ventures done by Tino with uprising and big corporations across Africa.'
         pageUrl='https://www.tinomazorodze.com/projects'
       />
       <BaseLayout>
         <main className="py-16 bg-accent-2">
-          <h1 className="text-center text-4xl mb-10">Free Open Source Projects</h1>
+          <h1 className="text-center text-4xl mb-10">Projects and Ventures</h1>
           <ul className="flex flex-col space-y-5 items-center">
             {projects.map((project, i) => (
               <li key={i} className="w-full max-w-[800px] mx-auto bg-primary p-4 rounded-lg flex flex-col md:flex-row space-x-4 relative">
