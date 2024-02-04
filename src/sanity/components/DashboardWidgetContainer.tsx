@@ -1,5 +1,5 @@
-import React, {forwardRef} from 'react'
-import {Card, Box, Heading} from '@sanity/ui'
+import React, { forwardRef } from 'react'
+import { Card, Box, Heading } from '@sanity/ui'
 import styled from 'styled-components'
 
 const Root = styled(Card)`
@@ -35,7 +35,8 @@ const Content = styled(Box)`
   height: stretch;
   min-height: 21.5em;
 
-  @media (min-width: ${({theme}) => theme.sanity.media[0]}px) {
+  @media (min-width: ${({ theme }: { theme: any }) =>
+      theme.sanity.media[0]}px) {
     overflow-y: auto;
     outline: none;
   }
@@ -47,23 +48,25 @@ interface DashboardWidgetProps {
   footer?: React.ReactNode
 }
 
-export const DashboardWidgetContainer = forwardRef(function DashboardWidgetContainer(
-  props: DashboardWidgetProps,
-  ref: React.Ref<HTMLDivElement>
-) {
-  const {header, children, footer} = props
+export const DashboardWidgetContainer = forwardRef(
+  function DashboardWidgetContainer(
+    props: DashboardWidgetProps,
+    ref: React.Ref<HTMLDivElement>,
+  ) {
+    const { header, children, footer } = props
 
-  return (
-    <Root radius={3} display="flex" ref={ref}>
-      {header && (
-        <Header borderBottom paddingX={3} paddingY={4}>
-          <Heading size={1} textOverflow="ellipsis">
-            {header}
-          </Heading>
-        </Header>
-      )}
-      {children && <Content>{children}</Content>}
-      {footer && <Footer borderTop>{footer}</Footer>}
-    </Root>
-  )
-})
+    return (
+      <Root radius={3} display="flex" ref={ref}>
+        {header && (
+          <Header borderBottom paddingX={3} paddingY={4}>
+            <Heading size={1} textOverflow="ellipsis">
+              {header}
+            </Heading>
+          </Header>
+        )}
+        {children && <Content>{children}</Content>}
+        {footer && <Footer borderTop>{footer}</Footer>}
+      </Root>
+    )
+  },
+)

@@ -1,44 +1,52 @@
-import siteConfig from "@/content/site.json";
-import { InformationCircleIcon } from "@heroicons/react/24/outline";
-import { ArrowTopRightOnSquareIcon, CheckBadgeIcon, CheckCircleIcon } from "@heroicons/react/24/solid";
-import { Linkify } from "@/lib/renderer";
-import { urlForImage } from "@/sanity/lib/image";
-import { url } from "inspector";
-import Image from "next/image";
-import Link from "next/link";
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
+import {
+  ArrowTopRightOnSquareIcon,
+  CheckBadgeIcon,
+  CheckCircleIcon,
+} from '@heroicons/react/24/solid'
+import { Linkify } from '@/lib/renderer'
+import { urlForImage } from '@/sanity/lib/image'
+import { url } from 'inspector'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function blockPartnersCard(props: any) {
-  const { partners, title } = props;
+  const { partners, title } = props
 
   return (
-    <aside className="mb-4 bg-accent-2 rounded-md p-2">
-      <div className="w-full flex justify-between items-center">
-        <div className="text-sm font-bold bg-gradient-to-tr from-secondaryColor via-primaryColor to-secondaryColor bg-clip-text text-transparent flex items-center">
+    <aside className="bg-accent-2 mb-4 rounded-md p-2">
+      <div className="flex w-full items-center justify-between">
+        <div className="from-secondaryColor via-primaryColor to-secondaryColor flex items-center bg-gradient-to-tr bg-clip-text text-sm font-bold text-transparent">
           {title}
-          <CheckBadgeIcon className="w-4 inline-block ml-1 text-primaryColor" />
+          <CheckBadgeIcon className="text-primaryColor ml-1 inline-block w-4" />
         </div>
-        <div className="text-right text-accent-6 hidden sm:block">
+        <div className="text-accent-6 hidden text-right sm:block">
           <span className="text-sm">Tino&#39;s Top Picks</span>
-          <InformationCircleIcon className="w-4 inline-block ml-1" />
+          <InformationCircleIcon className="ml-1 inline-block w-4" />
         </div>
       </div>
-      <div className="overflow-x-auto md:custom-scrollbar-h">
-        <div className="w-fit flex space-x-4 py-2 mx-auto">
+      <div className="md:custom-scrollbar-h overflow-x-auto">
+        <div className="mx-auto flex w-fit space-x-4 py-2">
           {partners.map((partner: any, index: any) => (
-            <div key={index} className="w-[220px] md:w-[280px] h-[350px] border border-accent-3 rounded-md bg-primary p-4">
-              <div className="flex items-center justify-center mb-4">
-                <span className="w-6 h-6 mr-2 grid place-content-center text-sm text-white bg-gradient-to-tr from-secondaryColor via-primaryColor to-secondaryColor rounded-full">{index + 1}</span>
-                <span className="font-bold text-accent-6">{partner.name}</span>
+            <div
+              key={index}
+              className="border-accent-3 bg-primary h-[350px] w-[220px] rounded-md border p-4 md:w-[280px]"
+            >
+              <div className="mb-4 flex items-center justify-center">
+                <span className="from-secondaryColor via-primaryColor to-secondaryColor mr-2 grid h-6 w-6 place-content-center rounded-full bg-gradient-to-tr text-sm text-white">
+                  {index + 1}
+                </span>
+                <span className="text-accent-6 font-bold">{partner.name}</span>
               </div>
               <Image
                 src={urlForImage(partner.image)
                   .width(250)
                   .height(50)
-                  .fit("crop")
-                  .auto("format")
+                  .fit('crop')
+                  .auto('format')
                   .url()}
                 alt={`${partner.name} Logo`}
-                className="mb-4 h-auto w-full mx-auto rounded-full"
+                className="mx-auto mb-4 h-auto w-full rounded-full"
                 loading="lazy"
                 title={partner.name}
                 height={50}
@@ -48,19 +56,20 @@ export default function blockPartnersCard(props: any) {
                 href={partner.link}
                 target="_blank"
                 rel="nofollow"
-                className="flex mb-4 items-center w-full justify-center bg-gradient-to-tr cursor-pointer hover:bg-gradient-to-tl from-secondaryColor via-primaryColor to-secondaryColor rounded-md text-white py-2 shadow-lg">
+                className="from-secondaryColor via-primaryColor to-secondaryColor mb-4 flex w-full cursor-pointer items-center justify-center rounded-md bg-gradient-to-tr py-2 text-white shadow-lg hover:bg-gradient-to-tl"
+              >
                 Learn More
-                <ArrowTopRightOnSquareIcon className="w-4 inline-block ml-2" />
+                <ArrowTopRightOnSquareIcon className="ml-2 inline-block w-4" />
               </Link>
-              <div className="flex justify-between border-b border-accent-3 pb-2 text-accent-6 text-sm">
+              <div className="border-accent-3 text-accent-6 flex justify-between border-b pb-2 text-sm">
                 <div>Starting At</div>
                 <div className="font-bold">{partner.startingPrice}</div>
               </div>
-              <ul className="text-sm text-accent-5">
+              <ul className="text-accent-5 text-sm">
                 {partner.features.map((feature: any, index: any) => (
                   <li key={index} className="flex justify-between py-2">
                     <div>{feature}</div>
-                    <CheckCircleIcon className="w-4 inline-block mr-2 text-green" />
+                    <CheckCircleIcon className="text-green mr-2 inline-block w-4" />
                   </li>
                 ))}
               </ul>
@@ -69,5 +78,5 @@ export default function blockPartnersCard(props: any) {
         </div>
       </div>
     </aside>
-  );
+  )
 }

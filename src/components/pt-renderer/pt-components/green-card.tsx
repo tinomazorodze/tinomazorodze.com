@@ -1,20 +1,18 @@
-import { ShieldCheckIcon } from '@heroicons/react/24/solid';
-import PtRenderer from '..';
-import { ArticleType } from '@/lib/article';
+import { ShieldCheckIcon } from '@heroicons/react/24/solid'
+import PtRenderer from '..'
+import { ArticleType } from '@/lib/article'
 
 export default function blockGreenCard(props: any, articles: ArticleType[]) {
-  const { title, body } = props;
+  const { title, body } = props
   return (
-    <aside className="width-full bg-accent-2  border-2 border-primaryColor rounded-xl my-8 relative p-4">
-      <div className="absolute left-1/2 -translate-x-[50%] top-0 -translate-y-4 rounded-full grid place-content-center w-10 h-10 border-2 border-primaryColor bg-accent-2">
-        <ShieldCheckIcon className="text-primaryColor w-8 h-8" />
+    <aside className="width-full  relative my-8 rounded-xl border-2 border-teal-500 p-4">
+      <div className="absolute left-1/2 top-0 grid h-10 w-10 -translate-x-[50%] -translate-y-4 place-content-center rounded-full border-2 border-teal-500 bg-white dark:bg-slate-900">
+        <ShieldCheckIcon className="h-8 w-8 text-teal-500" />
       </div>
-      <span className="block text-primaryColor font-bold mb-2">
-        {title}
-      </span>
-      <div className='text-accent-6 text-sm'>
+      <span className="mb-2 block font-bold text-teal-500">{title}</span>
+      <div className="text-accent-6 text-sm">
         <PtRenderer body={body} articles={articles} />
       </div>
     </aside>
-  );
+  )
 }

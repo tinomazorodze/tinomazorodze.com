@@ -1,11 +1,11 @@
-import Star from '@/components/icons/star';
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
+import { Star } from '@/icons'
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
 
 export default function Rating({ rating }: { rating: number }) {
   return (
-    <div className="relative float-right mr-4 group">
-      <div className="flex items-center p-2 border border-accent-3 rounded-full">
-        <span className="block text-2xl font-bold mr-2">{rating}</span>
+    <div className="group relative float-right mr-4">
+      <div className="border-accent-3 flex items-center rounded-full border p-2">
+        <span className="mr-2 block text-2xl font-bold">{rating}</span>
         <div>
           <div className="grid grid-cols-5">
             {Array(5)
@@ -20,15 +20,15 @@ export default function Rating({ rating }: { rating: number }) {
               ))}
           </div>
           <div className="flex items-center">
-            <span className="block text-[12px] text-accent-5 mr-1">
+            <span className="text-accent-5 mr-1 block text-[12px]">
               TDMArena Rating
             </span>
-            <InformationCircleIcon className="h-3 w-3 text-accent-4" />
+            <InformationCircleIcon className="text-accent-4 h-3 w-3" />
           </div>
         </div>
       </div>
       <div className="absolute top-full pt-2">
-        <div className="border border-accent-3 bg-primary text-[12px] p-2 rounded-md hidden group-hover:block ">
+        <div className="border-accent-3 bg-primary hidden rounded-md border p-2 text-[12px] group-hover:block ">
           <span>
             Our ratings take into consideration the pricing, features, usability
             and customer support. All ratings are determined soley by out
@@ -37,5 +37,5 @@ export default function Rating({ rating }: { rating: number }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

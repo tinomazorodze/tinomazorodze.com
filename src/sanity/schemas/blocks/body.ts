@@ -1,6 +1,12 @@
-import FormatColor from '@/components/icons/format-color'
+import { FormatColor } from '@/icons'
 import gradientText from '@/sanity/components/gradient-text'
-import { CheckmarkCircleIcon, CloseCircleIcon, HelpCircleIcon, ImageIcon, ThListIcon } from '@sanity/icons'
+import {
+  CheckmarkCircleIcon,
+  CloseCircleIcon,
+  HelpCircleIcon,
+  ImageIcon,
+  ThListIcon,
+} from '@sanity/icons'
 import { defineField } from 'sanity'
 
 export default defineField({
@@ -106,7 +112,7 @@ export default defineField({
     },
     {
       name: 'blockButtonCta',
-      type: "buttonCta.object",
-    }
+      type: 'buttonCta.object',
+    },
   ],
 })

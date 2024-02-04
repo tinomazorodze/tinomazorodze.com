@@ -1,16 +1,16 @@
-import { ArticleType } from "@/lib/article"
-import { getAllArticles } from "@/sanity/lib/client"
+import { ArticleType } from '@/lib/article'
+import { getAllArticles } from '@/sanity/lib/client'
 
 type SitemapLocation = {
   url: string
   changefreq?:
-  | 'always'
-  | 'hourly'
-  | 'daily'
-  | 'weekly'
-  | 'monthly'
-  | 'yearly'
-  | 'never'
+    | 'always'
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'yearly'
+    | 'never'
   priority: number
   lastmod?: Date
 }
@@ -19,9 +19,9 @@ type SitemapLocation = {
 const defaultUrls: SitemapLocation[] = [
   {
     url: '/',
-    changefreq: 'monthly',
+    changefreq: 'weekly',
     priority: 1.0,
-    lastmod: new Date('2023-09-28T08:30:42.842Z'),
+    lastmod: new Date(),
   },
   {
     url: '/blog',
@@ -29,26 +29,44 @@ const defaultUrls: SitemapLocation[] = [
     priority: 1.0,
     lastmod: new Date(),
   },
-  { url: '/projects', changefreq: 'weekly', priority: 1.0 },
+  {
+    url: '/about',
+    changefreq: 'yearly',
+    priority: 1.0,
+    lastmod: new Date('2024-02-04T09:38:42.687Z'),
+  },
+  {
+    url: '/projects',
+    changefreq: 'yearly',
+    priority: 1.0,
+    lastmod: new Date('2024-02-04T09:38:42.687Z'),
+  },
+  {
+    url: '/uses',
+    changefreq: 'yearly',
+    priority: 1.0,
+    lastmod: new Date('2024-02-04T09:38:42.687Z'),
+  },
 ]
 
 const createSitemap = (locations: SitemapLocation[]) => {
-  const baseUrl = "https://www.tinomazorodze.com" // Make sure to configure this
+  const baseUrl = 'https://www.tinomazorodze.com' // Make sure to configure this
   return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${locations
-      .map((location) => {
-        return `<url>
+        .map((location) => {
+          return `<url>
                     <loc>${baseUrl}${location.url}</loc>
                     <changefreq>${location.changefreq}</changefreq>
                     <priority>${location.priority}</priority>
-                    ${location.lastmod
-            ? `<lastmod>${location.lastmod.toISOString()}</lastmod>`
-            : ''
-          }
+                    ${
+                      location.lastmod
+                        ? `<lastmod>${location.lastmod.toISOString()}</lastmod>`
+                        : ''
+                    }
                   </url>`
-      })
-      .join('')}
+        })
+        .join('')}
   </urlset>
   `
 }

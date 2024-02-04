@@ -1,11 +1,11 @@
-import Logo from "@/components/icons/logo";
+import { StudioIcon } from '@/icons'
 
 const StudioLogo = (props: any) => {
-  const { renderDefault, title } = props;
+  const { renderDefault, title } = props
 
   return (
     <div className="flex items-center">
-      <Logo className="h-[30px] w-[30px]" />
+      <StudioIcon className="h-[30px] w-[30px]" />
       <>{renderDefault(props)}</>
     </div>
   )
