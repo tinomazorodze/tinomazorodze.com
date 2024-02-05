@@ -19,6 +19,7 @@ import { structure } from '@/sanity/desk-structure'
 import { customDocumentActions } from '@/sanity/plugins/customDocumentActions'
 import { TutorialsWidget } from '@/sanity/components/tutorials'
 import StudioLogo from '@/sanity/components/studio-header'
+import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
 
 export default defineConfig({
   basePath: '/studio',
@@ -37,6 +38,7 @@ export default defineConfig({
     deskTool({ structure }),
     media(),
     visionTool({ defaultApiVersion: apiVersion }),
+    vercelDeployTool(),
     customDocumentActions(),
   ],
 
