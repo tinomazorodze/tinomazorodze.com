@@ -9,7 +9,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
       </div>
-      <div className="relative flex w-full flex-col">
+      {/* TODO: I change w-full to w-[100vw] but it should work with w-full */}
+      <div className="relative flex w-full flex-col md:w-[100vw]">
         <Header />
         <main className="flex-auto">{children}</main>
         <Footer />

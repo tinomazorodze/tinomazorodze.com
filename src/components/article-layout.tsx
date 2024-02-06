@@ -2,7 +2,7 @@
 
 import { useContext } from 'react'
 import { useRouter } from 'next/navigation'
-import { AppContext } from '@/app/providers'
+import { AppContext } from './providers'
 import { Container } from '@/components/Container'
 import formatDate from 'date-fns/format'
 import { ArticleType } from '@/lib/article'
