@@ -9,7 +9,7 @@ export default function imageModule(props: any) {
       <div className="mb-1 block rounded-xl">
         <Image
           src={urlForImage(image).width(1280).height(720).url()}
-          alt={`${alt} - Tino Mazorodze`}
+          alt={`${alt} - Tino Mazorodze Blog`}
           className="rounded-xl h-auto w-full"
           loading="lazy"
           title={alt}
