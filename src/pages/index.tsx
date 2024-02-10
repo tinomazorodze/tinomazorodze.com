@@ -67,7 +67,7 @@ export default function Home(props: BlogProps) {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I’m Tino, a software architect and entrepreneur based in the city of
             Harare. I’m the founder and CEO of Mazorodze Technologies (MazTech),
-            where we develop technologies that empower regular Zimbwbeans to
+            where we develop technologies that empower regular Zimbabweans to
             take advantage of the internet and its technologies.
           </p>
           <div className="mt-6 flex gap-6">
