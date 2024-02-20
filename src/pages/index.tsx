@@ -56,7 +56,7 @@ export default function Home(props: BlogProps) {
     <>
       <Helmet
         metaTitle="Tino Mazorodze - Software architect, founder, and tech enthusiast"
-        metaDescription="I’m Tino, a software architect and entrepreneur based in the city of Harare. I’m the founder and CEO of MazTech, where we empower regular Zimbabweans to take advantage of the internet and its technologies."
+        metaDescription="I’m Tino, a software architect and entrepreneur based in Zimbabwe. I love venturing into innovative business projects and exploring the world of technology."
         pageUrl="https://www.tinomazorodze.com"
       />
       <Container className="mt-9">

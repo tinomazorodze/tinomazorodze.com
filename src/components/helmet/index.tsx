@@ -7,8 +7,6 @@ export const PersonMarkup = {
   name: 'Tino Mazorodze',
   jobTitle: 'Software Architect',
   email: 'tino@tinomazorodze.com',
-  tel: '+263780105064',
-  website: siteConfig.url.web,
   sameAs: [
     `${siteConfig.url.twitter}`,
     `${siteConfig.url.instagram}`,
