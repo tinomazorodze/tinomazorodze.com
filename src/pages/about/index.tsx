@@ -1,4 +1,3 @@
-import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -48,18 +47,12 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'About',
-  description:
-    'I’m Tino Mazorodze. I live in Harare, where I design the future.',
-}
-
 export default function About() {
   return (
     <>
       <Helmet
         metaTitle="About | Tino Mazorodze"
-        metaDescription="I’m Tino Mazorodze. I live in Harare, where I design the future."
+        metaDescription="I'm Tino Mazorodze, a designer and innovator from Zimbabwe, crafting solutions that anticipate the future's challenges. Find out more about my work and inspirations"
         pageUrl="https://www.tinomazorodze.com/about"
       />
       <Container className="mt-16 sm:mt-32">
@@ -76,7 +69,8 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-              I’m Tino Mazorodze. I live in Harare, where I design the future.
+              I’m Tino Mazorodze. I love technology and venturing into
+              innovative projects.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>

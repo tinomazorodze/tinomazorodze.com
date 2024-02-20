@@ -41,7 +41,7 @@ export default function Projects() {
     <>
       <Helmet
         metaTitle="Projects | Tino Mazorodze"
-        metaDescription="Things Tino made trying to put his dent in the universe."
+        metaDescription="Discover the projects that Tino has poured his heart and soul into, with the aim of making a significant impact on the universe."
         pageUrl="https://www.tinomazorodze.com/projects"
       />
       <SimpleLayout

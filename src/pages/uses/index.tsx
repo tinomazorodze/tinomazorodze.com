@@ -40,7 +40,7 @@ export default function Uses() {
     <>
       <Helmet
         metaTitle="Uses | Tino Mazorodze"
-        metaDescription="Software I use, gadgets I love, and other things I recommend."
+        metaDescription="From cutting-edge software to the latest gadgets, explore Tino's personal recommendations and discover the tools that help shape his projects and productivity."
         pageUrl="https://www.tinomazorodze.com/uses"
       />
       <SimpleLayout
