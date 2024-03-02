@@ -10,7 +10,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       {/* TODO: I change w-full to w-[100vw] but it should work with w-full */}
-      <div className="relative flex w-[100vw] flex-col">
+      <div className="relative w-full">
         <Header />
         <main className="flex-auto">{children}</main>
         <Footer />

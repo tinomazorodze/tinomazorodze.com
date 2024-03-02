@@ -20,7 +20,7 @@ export default function Document() {
         `,
         }}
       />
-      <body className="flex h-full bg-zinc-50 dark:bg-black">
+      <body className="h-full w-full bg-zinc-50 dark:bg-black">
         <Main />
         <NextScript />
       </body>

@@ -23,11 +23,9 @@ export default function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <Providers>
-        <div className="flex w-full">
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </div>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </Providers>
       <Analytics />
     </>
