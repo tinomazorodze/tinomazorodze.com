@@ -8,6 +8,21 @@ const nextConfig = {
   images: {
     domains: ['cdn.sanity.io'],
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/projects',
+        destination: '/programming',
+        permanent: true,
+      },
+      {
+        source: '/uses',
+        destination: '/tech',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 const withMDX = nextMDX({

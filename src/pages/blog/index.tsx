@@ -45,12 +45,12 @@ export default function ArticlesIndex(props: BlogProps) {
     <>
       <Helmet
         metaTitle="Articles | Tino Mazorodze"
-        metaDescription="All of Tino&#39;s well researched articles about the technology industry in Zimbabwe and other interesting topics."
+        metaDescription="All of Tino&#39;s well researched articles, experiences and tips in programming, gaming and the tech industry."
         pageUrl="https://www.tinomazorodze.com/blog"
       />
       <SimpleLayout
-        title="Writing on programming, business and technology in Zimbabwe."
-        intro="All of Tino&#39;s well researched articles about the technology industry in Zimbabwe and other interesting topics."
+        title="Writing on programming, games and technology."
+        intro="All of Tino&#39;s well researched articles, experiences and tips in programming, gaming and the tech industry"
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
           <div className="flex max-w-3xl flex-col space-y-16">

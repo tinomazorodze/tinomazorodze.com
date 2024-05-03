@@ -6,7 +6,9 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
+  SteamIcon,
   XIcon,
+  YoutubeIcon,
 } from '@/components/SocialIcons'
 
 import { ArticleType } from '@/lib/article'
@@ -55,26 +57,43 @@ export default function Home(props: BlogProps) {
   return (
     <>
       <Helmet
-        metaTitle="Tino Mazorodze - Software architect, founder, and tech enthusiast"
-        metaDescription="I’m Tino, a software architect and entrepreneur based in Zimbabwe. I love venturing into innovative business projects and exploring the world of technology."
+        metaTitle="Tino Mazorodze - Programmer, gamer, and tech enthusiast"
+        metaDescription="I’m Tino, a programmer and gamer (techtinoe). I love developing open source projects, playing MMO games and exploring the world of technology."
         pageUrl="https://www.tinomazorodze.com"
       />
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software architect, founder, and tech enthusiast.
+            Daylight Programmer & Midnight Gamer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Tino, a software architect and entrepreneur based in the city of
-            Harare. I’m the founder and CEO of Mazorodze Technologies (MazTech),
-            where we develop technologies that empower regular Zimbabweans to
-            take advantage of the internet and its technologies.
+            I’m Tino. To my fellow programmers you can contribute and work
+            together with me on my{' '}
+            <Link
+              href="https://github.com/tinomazorodze?tab=repositories"
+              className="text-teal-500"
+            >
+              open source projects on github
+            </Link>{' '}
+            . To my fellow gamers you can find me on{' '}
+            <Link
+              href="https://steamcommunity.com/id/techtinooe/"
+              className="text-teal-500"
+            >
+              steam as techtinooe
+            </Link>
+            . I usually play Dota 2, Counter Strike and Software Inc.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com/MazorodzeHQ"
+              href="https://steamcommunity.com/id/techtinooe/"
+              aria-label="Follow on Steam"
+              icon={SteamIcon}
+            />
+            <SocialLink
+              href="https://www.youtube.com/channel/UCFd2JkydONLWjPQOtnFdDEA"
               aria-label="Follow on X"
-              icon={XIcon}
+              icon={YoutubeIcon}
             />
             <SocialLink
               href="https://www.instagram.com/mazorodze.hq"

@@ -30,22 +30,28 @@ const defaultUrls: SitemapLocation[] = [
     lastmod: new Date(),
   },
   {
+    url: '/games',
+    changefreq: 'weekly',
+    priority: 1.0,
+    lastmod: new Date(),
+  },
+  {
     url: '/about',
     changefreq: 'yearly',
     priority: 1.0,
-    lastmod: new Date('2024-02-04T09:38:42.687Z'),
+    lastmod: new Date('2024-05-03T07:56:32.687Z'),
   },
   {
-    url: '/projects',
+    url: '/programming',
     changefreq: 'yearly',
     priority: 1.0,
-    lastmod: new Date('2024-02-04T09:38:42.687Z'),
+    lastmod: new Date('2024-05-03T08:38:46.687Z'),
   },
   {
-    url: '/uses',
+    url: '/tech',
     changefreq: 'yearly',
     priority: 1.0,
-    lastmod: new Date('2024-02-04T09:38:42.687Z'),
+    lastmod: new Date('2024-05-04T10:04:22.687Z'),
   },
 ]
 

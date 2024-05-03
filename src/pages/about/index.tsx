@@ -52,7 +52,7 @@ export default function About() {
     <>
       <Helmet
         metaTitle="About | Tino Mazorodze"
-        metaDescription="I'm Tino Mazorodze, a designer and innovator from Zimbabwe, crafting solutions that anticipate the future's challenges. Find out more about my work and inspirations"
+        metaDescription="I'm Tino Mazorodze, a programmer and gamer from Zimbabwe. I post about my open source projects and video game experiences and tips on my blog"
         pageUrl="https://www.tinomazorodze.com/about"
       />
       <Container className="mt-16 sm:mt-32">
@@ -69,8 +69,8 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-              I’m Tino Mazorodze. I love technology and venturing into
-              innovative projects.
+              I’m Tino Mazorodze (AKA TechTinoe). I love programming and playing
+              MMO Games.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
@@ -80,26 +80,27 @@ export default function About() {
                 playing video games.
               </p>
               <p>
-                Starting Form 1 at St Faith&#39;s High School I got introduced
-                to programming and by default I loved it and was apparently good
-                at it. Like the entrepreneur I am today young me decided to
-                profit from my skills and had people pay me to do their Computer
-                Science projects for them.
+                As i grew older as a computer lover by default I got into
+                programming. I started with simple Visual Basic code at school
+                then got bored and learnt Java as well as web development. Now I
+                build a bunch of projects which are all open source on my github
+                account. Hopefully someday one of these projects might turn into
+                something big with the help of contributions from other
+                programmers
               </p>
               <p>
-                3 years later I got bored of Visual Basic programming and that
-                is when I bumped into web development. I watched a lot of
-                YouTube tutorials and read a lot of documentation online on
-                Front-End Web Development. I have explored various other
-                frameworks, languages and libraries since then across Mobile
-                App, Desktop App and Web App Development
+                If it hasn’t been clear enough then know that I am a total nerd
+                🤣 so my favourite video games are complicated and have quite a
+                steep learning curve. Dota 2 is my number 1 favourite game. I
+                play dota everyday and its been painful being stuck in Herald if
+                you know what i mean. Apart from Dota I usually play simulators
+                like Software Inc, Big Ambitions and Euro Trucks.
               </p>
               <p>
-                Today, I’m the founder and CEO of Mazorodze Ventures which is
-                rather known as MazTech. We are a venture capitalist company
-                which aims to drive the internet industry of Zimbabwe in the
-                right direction and empower regular Zimbabweans with the
-                knowledge and skill required to take advantage of the internet.
+                Right now I am an aspiring software engineering student at the
+                University of Zimbabwe. I am yet to start my 4 year course but I
+                will regularly post content on my blog and youtube channel along
+                the way.
               </p>
             </div>
           </div>
