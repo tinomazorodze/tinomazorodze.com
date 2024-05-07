@@ -1,21 +1,16 @@
 import { ArticleLayout } from '@/components/article-layout'
 import ArticleHelmet from '@/components/helmet/article-helmet'
 import { ArticleType } from '@/lib/article'
-import {
-  getAllArticles,
-  getAllTopics,
-  getArticleBySlug,
-} from '@/sanity/lib/client'
+import { getAllArticles, getArticleBySlug } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 
 type ArticleProps = {
   article: ArticleType
   articles: ArticleType[]
-  topic: string
 }
 
 export default function Page(props: ArticleProps) {
-  const { article, articles, topic } = props
+  const { article, articles } = props
 
   return (
     <>
@@ -59,20 +54,15 @@ type ContextType = {
 
 export async function getStaticProps(context: ContextType) {
   const articleSlug: string = context.params.slug
-  const [articles, article, topics]: [ArticleType[], ArticleType, any] =
-    await Promise.all([
-      getAllArticles(),
-      getArticleBySlug(articleSlug),
-      getAllTopics(),
-    ])
-
-  const topic = topics.find((topic: any) => topic._id == article.topic._ref)
+  const [articles, article]: [ArticleType[], ArticleType] = await Promise.all([
+    getAllArticles(),
+    getArticleBySlug(articleSlug),
+  ])
 
   return {
     props: {
       articles,
       article,
-      topic,
     },
   }
 }

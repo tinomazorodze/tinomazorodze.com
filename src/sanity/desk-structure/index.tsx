@@ -1,7 +1,6 @@
-import { StructureResolver } from "sanity/desk";
-import articlesStructure from "./articles-structure";
-import projectsStructure from "./projects-structure";
-import topicsStructure from "./topics-structure";
+import { StructureResolver } from 'sanity/desk'
+import articlesStructure from './articles-structure'
+import gamesStructure from './games-structure'
 
 export const structure: StructureResolver = (S, context) =>
   S.list()
@@ -9,8 +8,6 @@ export const structure: StructureResolver = (S, context) =>
     .items([
       articlesStructure(S, context),
       S.divider(),
-      projectsStructure(S, context),
-      S.divider(),
-      topicsStructure(S, context),
+      gamesStructure(S, context),
       S.divider(),
     ])

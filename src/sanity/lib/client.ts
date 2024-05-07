@@ -1,7 +1,13 @@
 import { createClient } from 'next-sanity'
 
 import { apiVersion, dataset, projectId, useCdn } from '../env'
-import { allArticlesQuery, allProjectsQuery, allTopicsQuery, articleBySlugQuery } from './queries'
+import {
+  allArticlesQuery,
+  allGamesQuery,
+  allProjectsQuery,
+  articleBySlugQuery,
+  gameAndRelatedGamesQuery,
+} from './queries'
 import { SanityClient } from 'sanity'
 
 export function getClient(): SanityClient {
@@ -29,6 +35,13 @@ export async function getAllArticles(): Promise<any> {
   return {}
 }
 
+export async function getAllGames(): Promise<any> {
+  if (client) {
+    return (await client.fetch(allGamesQuery)) || {}
+  }
+  return {}
+}
+
 export async function getArticleBySlug(slug: string): Promise<any> {
   if (client) {
     return (await client.fetch(articleBySlugQuery, { slug })) || {}
@@ -36,16 +49,16 @@ export async function getArticleBySlug(slug: string): Promise<any> {
   return {}
 }
 
-export async function getAllTopics(): Promise<any> {
+export async function getAllProjects(): Promise<any> {
   if (client) {
-    return (await client.fetch(allTopicsQuery)) || {}
+    return (await client.fetch(allProjectsQuery)) || {}
   }
   return {}
 }
 
-export async function getAllProjects(): Promise<any> {
+export async function getGameAndRelatedGames(slug: string): Promise<any> {
   if (client) {
-    return (await client.fetch(allProjectsQuery)) || {}
+    return client.fetch(gameAndRelatedGamesQuery, { slug }) || {}
   }
   return {}
 }

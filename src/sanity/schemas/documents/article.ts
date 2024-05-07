@@ -1,11 +1,11 @@
-import { BookIcon } from "@sanity/icons";
-import { defineType } from "sanity";
+import { BookIcon } from '@sanity/icons'
+import { defineType } from 'sanity'
 import { format, parseISO } from 'date-fns'
 
 export default defineType({
-  name: "article",
-  title: "Article",
-  type: "document",
+  name: 'article',
+  title: 'Article',
+  type: 'document',
   icon: BookIcon,
   fields: [
     {
@@ -21,18 +21,30 @@ export default defineType({
       options: {
         source: 'name',
         maxLength: 200,
-      }
+      },
     },
     {
       name: 'title',
       type: 'string',
-      title: 'Title'
+      title: 'Title',
+    },
+
+    {
+      name: 'tag',
+      type: 'string',
+      title: 'Tag',
+      options: {
+        layout: 'radio',
+        direction: 'horizontal',
+        list: ['games', 'programming', 'tech', 'zim'],
+      },
     },
     {
-      name: 'topic',
+      name: 'game',
+      title: 'Game',
       type: 'reference',
-      title: 'Topic',
-      to: [{ type: 'topic' }],
+      to: [{ type: 'game' }],
+      hidden: ({ parent }) => parent.tag != 'games',
     },
     {
       name: 'seo',
@@ -44,7 +56,9 @@ export default defineType({
           title: 'Title',
           type: 'string',
           validation: (Rule) =>
-            Rule.max(70).warning('Longer titles may be truncated by search engines'),
+            Rule.max(70).warning(
+              'Longer titles may be truncated by search engines',
+            ),
         },
         {
           name: 'description',
@@ -52,14 +66,16 @@ export default defineType({
           type: 'text',
           rows: 2,
           validation: (Rule) =>
-            Rule.max(160).warning('Longer descriptions may be truncated by search engines'),
+            Rule.max(160).warning(
+              'Longer descriptions may be truncated by search engines',
+            ),
         },
         {
           name: 'image',
           type: 'image',
-          title: 'Image'
+          title: 'Image',
         },
-      ]
+      ],
     },
     {
       name: 'intro',
@@ -88,53 +104,53 @@ export default defineType({
       },
     },
     {
-      name: "products",
-      title: "Products",
+      name: 'products',
+      title: 'Products',
       hidden: ({ parent }) => !parent.hasProductListing,
-      type: "array",
+      type: 'array',
       of: [
         {
-          type: "object",
+          type: 'object',
           fields: [
             {
-              name: "name",
-              title: "Name",
-              type: "string",
+              name: 'name',
+              title: 'Name',
+              type: 'string',
             },
             {
-              name: "description",
-              title: "Description",
-              type: "text",
+              name: 'description',
+              title: 'Description',
+              type: 'text',
               rows: 3,
             },
             {
-              name: "image",
-              title: "Image",
-              type: "image",
+              name: 'image',
+              title: 'Image',
+              type: 'image',
             },
             {
-              name: "link",
-              title: "Link",
-              type: "object",
+              name: 'link',
+              title: 'Link',
+              type: 'object',
               fields: [
                 {
-                  name: "url",
-                  title: "URL",
-                  type: "url",
+                  name: 'url',
+                  title: 'URL',
+                  type: 'url',
                 },
                 {
-                  name: "dofollow",
-                  title: "Dofollow",
-                  type: "boolean",
-                }
-              ]
-            }
+                  name: 'dofollow',
+                  title: 'Dofollow',
+                  type: 'boolean',
+                },
+              ],
+            },
           ],
           preview: {
             select: {
-              title: "name",
-              subtitle: "description",
-              media: "image",
+              title: 'name',
+              subtitle: 'description',
+              media: 'image',
             },
             prepare({ title, subtitle, media }) {
               return {
@@ -142,15 +158,16 @@ export default defineType({
                 subtitle: subtitle,
                 media: media,
               }
-            }
-          }
-        }
-      ]
+            },
+          },
+        },
+      ],
     },
     {
       name: 'subHeadings',
       title: 'Sub Headings',
-      description: 'Write your h2 and h3 sub headings exactly as they appear in the article body',
+      description:
+        'Write your h2 and h3 sub headings exactly as they appear in the article body',
       type: 'array',
       of: [
         {
@@ -162,17 +179,17 @@ export default defineType({
               type: 'string',
             },
             {
-              name: "type",
-              title: "Type",
-              type: "string",
+              name: 'type',
+              title: 'Type',
+              type: 'string',
               options: {
                 list: [
-                  { title: "h2", value: "h2" },
-                  { title: "h3", value: "h3" },
-                  { title: "h4", value: "h4" },
+                  { title: 'h2', value: 'h2' },
+                  { title: 'h3', value: 'h3' },
+                  { title: 'h4', value: 'h4' },
                 ],
               },
-            }
+            },
           ],
         },
       ],
@@ -205,19 +222,21 @@ export default defineType({
           to: [{ type: 'article' }],
         },
       ],
-      description: 'These articles will be displayed at the hero so make sure they are related to the topic of this article',
-    }
-
+      description:
+        'These articles will be displayed at the hero so make sure they are related to the topic of this article',
+    },
   ],
   preview: {
     select: {
       title: 'title',
       date: '_updatedAt',
+      tag: 'tag',
       media: 'seo.image',
     },
-    prepare({ title, media, date }) {
+    prepare({ title, media, date, tag }) {
       const subtitles = [
         date && `on ${format(parseISO(date), 'LLL d, yyyy')}`,
+        `[${tag}]`,
       ].filter(Boolean)
 
       return { title, media, subtitle: subtitles.join(' ') }

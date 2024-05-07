@@ -4,10 +4,28 @@ export const allArticlesQuery = groq`*[_type == "article"] | order(date desc, _u
   _id,
   title,
   slug,
-  topic,
+  tag,
   _updatedAt,
   seo,
 }`
+
+export const allGamesQuery = groq`*[_type == "game"] | order(date desc, _updatedAt desc) {
+  _id,
+  name,
+  slug,
+  _updatedAt,
+  seo,
+}`
+
 export const articleBySlugQuery = groq`*[_type == "article" && slug.current == $slug][0]`
-export const allTopicsQuery = groq`*[_type == "topic"]`
 export const allProjectsQuery = groq`*[_type == "project"] | order(date desc, _updatedAt desc)`
+
+export const gameAndRelatedGamesQuery = groq`
+{
+  "game": *[_type == "game" && slug.current == $slug] | order(_updatedAt desc) [0],
+  "relatedGames": *[_type == "game" && slug.current != $slug] | order(date desc, _updatedAt desc) [0...3] {
+    _id,
+    name,
+    seo
+  }
+}`
