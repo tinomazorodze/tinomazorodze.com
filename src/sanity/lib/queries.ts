@@ -15,6 +15,7 @@ export const allGamesQuery = groq`*[_type == "game"] | order(date desc, _updated
   slug,
   _updatedAt,
   seo,
+  plainCoverImage,
 }`
 
 export const articleBySlugQuery = groq`*[_type == "article" && slug.current == $slug][0]`
