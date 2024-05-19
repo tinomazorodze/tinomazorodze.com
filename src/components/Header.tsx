@@ -8,6 +8,8 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.png'
+import { callBackHref } from '@/lib/utils'
+import { useRouter } from 'next/router'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -364,6 +366,9 @@ export function Header() {
     }
   }, [isHomePage])
 
+  const router = useRouter()
+  const { pathname } = router
+
   return (
     <>
       <header
@@ -439,8 +444,20 @@ export function Header() {
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
               <div className="flex justify-end md:flex-1">
-                <div className="pointer-events-auto">
+                <div className="pointer-events-auto flex items-center gap-2">
                   <ThemeToggle />
+                  <Link
+                    href="/sign-in"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      callBackHref(pathname, '/sign-in')
+                    }}
+                    className="rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                  >
+                    <span className="text-sm text-zinc-600 dark:text-zinc-300">
+                      Login
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>
