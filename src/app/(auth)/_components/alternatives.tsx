@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { callBackHref } from '@/lib/utils'
 import { useSearchParams } from 'next/navigation'
-import { P } from '@/components/pt-renderer/pt-components/p'
 
 export function SignInAlt() {
   const searchParams = useSearchParams()

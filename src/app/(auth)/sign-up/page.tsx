@@ -1,8 +1,7 @@
-import Link from 'next/link'
-import { redirect } from 'next/navigation'
 import { Form } from '../_components/form'
 import { SubmitButton } from '../_components/submit-button'
 import { SignUpAlt } from '../_components/alternatives'
+import { Suspense } from 'react'
 
 export default function Login() {
   async function register(formData: FormData) {
@@ -32,7 +31,9 @@ export default function Login() {
           <SubmitButton>Sign Up</SubmitButton>
           <p className="text-center text-sm text-gray-600">
             {'Already have an account? '}
-            <SignUpAlt />
+            <Suspense>
+              <SignUpAlt />
+            </Suspense>
             {' instead.'}
           </p>
         </Form>

@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { SignInAlt } from '../_components/alternatives'
 import { Form } from '../_components/form'
 import { SubmitButton } from '../_components/submit-button'
@@ -25,7 +26,9 @@ export default function Login() {
           <SubmitButton>Sign in</SubmitButton>
           <p className="text-center text-sm text-gray-600">
             {"Don't have an account? "}
-            <SignInAlt />
+            <Suspense>
+              <SignInAlt />
+            </Suspense>
             {' for free.'}
           </p>
         </Form>
