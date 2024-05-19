@@ -2,6 +2,13 @@ import { Form } from '../_components/form'
 import { SubmitButton } from '../_components/submit-button'
 import { SignUpAlt } from '../_components/alternatives'
 import { Suspense } from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Create Account | Sign Up ',
+  description:
+    'Sign-up page. Create your account on tinomazorodze.com and gain access to exclusive features.',
+}
 
 export default function Login() {
   async function register(formData: FormData) {

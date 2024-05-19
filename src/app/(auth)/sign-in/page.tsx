@@ -2,6 +2,12 @@ import { Suspense } from 'react'
 import { SignInAlt } from '../_components/alternatives'
 import { Form } from '../_components/form'
 import { SubmitButton } from '../_components/submit-button'
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Welcome Back | Sign In ',
+  description: 'Sign-in page. Login to your account on tinomazorodze.com',
+}
 
 export default function Login() {
   return (
