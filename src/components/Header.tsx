@@ -135,6 +135,7 @@ function MobileNavigation(
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/blog">Blog</MobileNavItem>
                 <MobileNavItem href="/programming">Programming</MobileNavItem>
+                <MobileNavItem href="/games">Gaming</MobileNavItem>
                 <MobileNavItem href="/tech">Tech</MobileNavItem>
               </ul>
             </nav>

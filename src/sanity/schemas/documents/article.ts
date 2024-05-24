@@ -118,10 +118,9 @@ export default defineType({
               type: 'string',
             },
             {
-              name: 'description',
-              title: 'Description',
-              type: 'text',
-              rows: 3,
+              name: 'bestFor',
+              title: 'Best for',
+              type: 'string',
             },
             {
               name: 'image',
@@ -133,6 +132,11 @@ export default defineType({
               title: 'Link',
               type: 'object',
               fields: [
+                {
+                  name: 'text',
+                  title: 'Text',
+                  type: 'string',
+                },
                 {
                   name: 'url',
                   title: 'URL',
