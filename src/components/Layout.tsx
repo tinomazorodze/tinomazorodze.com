@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import Banner from './banner'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,6 +12,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </div>
       {/* TODO: I change w-full to w-[100vw] but it should work with w-full */}
       <div className="relative w-full">
+        <aside>
+          <Banner />
+        </aside>
         <Header />
         <main className="flex-auto">{children}</main>
         <Footer />
