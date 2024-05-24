@@ -22,7 +22,7 @@ export default function Games({ games }: PageProps) {
       <Helmet
         metaTitle="Games | TechTinoe"
         metaDescription="Tips, clips and insights from a midnight gamer"
-        pageUrl="https://www.tinomazorodze.com/gaming"
+        pageUrl="https://www.tinomazorodze.com/games"
       />
       <Container className="mt-16 sm:mt-32">
         <header className="mx-auto max-w-2xl text-center">

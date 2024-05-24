@@ -14,7 +14,7 @@ export default function Game({ game, relatedGames }: PageProps) {
     <>
       <ArticleHelmet
         articleName={game.seo.title}
-        articleURL={`/game/a/${game.slug.current}`}
+        articleURL={`/games/a/${game.slug.current}`}
         createdAt={game._createdAt}
         metaDescription={game.seo.description}
         metaImage={urlForImage(game.seo.image).url()}

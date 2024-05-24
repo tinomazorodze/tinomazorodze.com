@@ -3,6 +3,7 @@ import { SignInAlt } from '../_components/alternatives'
 import { Form } from '../_components/form'
 import { SubmitButton } from '../_components/submit-button'
 import { type Metadata } from 'next'
+import { signIn } from '@/app/auth'
 
 export const metadata: Metadata = {
   title: 'Welcome Back | Sign In ',
@@ -22,11 +23,11 @@ export default function Login() {
         <Form
           action={async (formData: FormData) => {
             'use server'
-            // await signIn('credentials', {
-            //   redirectTo: '/protected',
-            //   email: formData.get('email') as string,
-            //   password: formData.get('password') as string,
-            // })
+            await signIn('credentials', {
+              redirectTo: '/dashboard',
+              email: formData.get('email') as string,
+              password: formData.get('password') as string,
+            })
           }}
         >
           <SubmitButton>Sign in</SubmitButton>

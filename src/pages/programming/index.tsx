@@ -12,7 +12,7 @@ const projects = [
     description:
       'All in one study pack for Students. AI Chatbot, tasks & reminders, progress tracking etc',
     link: {
-      repo: 'https://github.com/tinomazorodze/studycompanion',
+      repo: 'https://www.studycompanion.io/',
       site: 'https://www.studycompanion.io/',
     },
     logo: logoStudyCompanion,

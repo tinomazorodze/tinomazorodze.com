@@ -6,7 +6,7 @@ export const PersonMarkup = {
   '@type': 'Person',
   name: 'Tino Mazorodze',
   jobTitle: 'Software Architect',
-  email: 'tino@tinomazorodze.com',
+  email: 'tinomazorodze.mt@gmail.com',
   sameAs: [
     `${siteConfig.url.twitter}`,
     `${siteConfig.url.instagram}`,
@@ -17,6 +17,7 @@ export const PersonMarkup = {
 export const WebsiteMarkup = {
   '@context': 'https://schema.org',
   '@type': 'Website',
+  name: 'Tino Mazorodze Blog',
   url: siteConfig.url.web,
 }
 

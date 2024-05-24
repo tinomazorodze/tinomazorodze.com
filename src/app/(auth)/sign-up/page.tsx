@@ -3,6 +3,8 @@ import { SubmitButton } from '../_components/submit-button'
 import { SignUpAlt } from '../_components/alternatives'
 import { Suspense } from 'react'
 import { Metadata } from 'next'
+import { createUser, getUser } from '@/app/db'
+import { redirect } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'Create Account | Sign Up ',
@@ -13,16 +15,16 @@ export const metadata: Metadata = {
 export default function Login() {
   async function register(formData: FormData) {
     'use server'
-    // let email = formData.get('email') as string
-    // let password = formData.get('password') as string
-    // let user = await getUser(email)
+    let email = formData.get('email') as string
+    let password = formData.get('password') as string
+    let user = await getUser(email)
 
-    // if (user.length > 0) {
-    //   return 'User already exists' // TODO: Handle errors with useFormStatus
-    // } else {
-    //   await createUser(email, password)
-    //   redirect('/login')
-    // }
+    if (user.length > 0) {
+      return 'User already exists' // TODO: Handle errors with useFormStatus
+    } else {
+      await createUser(email, password)
+      redirect('/sign-in')
+    }
   }
 
   return (
