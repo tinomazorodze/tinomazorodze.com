@@ -13,7 +13,7 @@ export type ArticleType = {
   optimizeFor: 'reading' | 'linkClick' | 'both'
   products?: {
     name: string
-    description: string
+    bestFor: string
     image: {
       asset: {
         _ref: string
@@ -21,6 +21,7 @@ export type ArticleType = {
     }
     link: {
       url: string
+      text: string
       dofollow: boolean
     }
   }[]

@@ -10,7 +10,7 @@ export default function Banner() {
         )
       }}
     >
-      <span className="text-xs">
+      <span className="text-xs text-white">
         <span>New Features Coming ⚙️.</span>&nbsp;
         <span className="underline">Learn more 💁‍♂️</span>
       </span>

@@ -9,6 +9,7 @@ import { ArticleType } from '@/lib/article'
 import HeroImage from './hero-image'
 import PtRenderer from './pt-renderer'
 import { Card } from '@/components/Card'
+import ProductListing from './product-listing'
 
 function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -67,6 +68,7 @@ export function ArticleLayout({
               alt={`${article.name} | Tino Mazorodze`}
               image={article.seo.image}
             />
+            {article.products && <ProductListing articleProducts={article} />}
             <PtRenderer body={article.body} articles={articles} />
             <div className="mt-20">
               <h2 className="text-3xl">More Articles To Read</h2>
