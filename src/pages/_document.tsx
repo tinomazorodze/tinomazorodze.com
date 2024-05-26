@@ -11,6 +11,11 @@ export default function Document() {
         src={`https://www.googletagmanager.com/gtag/js?id='${process.env.GA_SECRET}'`}
       />
       <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5335750983677223"
+        crossOrigin="anonymous"
+      />
+      <script
         dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];
