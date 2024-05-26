@@ -100,7 +100,7 @@ The date at the top of this Cookie Policy indicates when it was last updated.
 
 ## Where can I get further information?
 
-If you have any questions about our use of cookies or other technologies, please email us at tino@tinomazorodze.com or by post to:
+If you have any questions about our use of cookies or other technologies, please email us at tinomaozordze.mt@gmail.com or by post to:
 
 Tech Digital Media LLC <br></br>
 178 Columbus Ave, Unit 237190 <br></br>
