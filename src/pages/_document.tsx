@@ -25,6 +25,21 @@ export default function Document() {
         `,
         }}
       />
+
+      {/* For ad blocker users */}
+      <script
+        async
+        src="https://fundingchoicesmessages.google.com/i/pub-5335750983677223?ers=1"
+        nonce="kZDuAnw1DRrOv5vWX1VLDg"
+      />
+      <script
+        nonce="kZDuAnw1DRrOv5vWX1VLDg"
+        dangerouslySetInnerHTML={{
+          __html: `
+            function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();}
+          `,
+        }}
+      />
       <body className="h-full w-full bg-zinc-50 dark:bg-black">
         <Main />
         <NextScript />
