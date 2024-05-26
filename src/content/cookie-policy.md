@@ -1,8 +1,8 @@
 # COOKIE POLICY
 
-_Last updated April 28, 2023_
+_Last updated May 26, 2024_
 
-This Cookie Policy explains how Tech Digital Media ("Company," "we," "us," and "our") uses cookies and similar technologies to recognize you when you visit our website at https://www.tinomazorodze.com ("Website"). It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+This Cookie Policy explains how Tino Mazorodze Blog LLC ("Company," "we," "us," and "our") uses cookies and similar technologies to recognize you when you visit our website at https://www.tinomazorodze.com ("Website"). It explains what these technologies are and why we use them, as well as your rights to control our use of them.
 
 In some cases we may use cookies to collect personal information, or that becomes personal information if we combine it with other information.
 
@@ -10,7 +10,7 @@ In some cases we may use cookies to collect personal information, or that become
 
 Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information.
 
-Cookies set by the website owner (in this case, Tech Digital Media) are called "first-party cookies." Cookies set by parties other than the website owner are called "third-party cookies." Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics). The parties that set these third-party cookies can recognize your computer both when it visits the website in question and also when it visits certain other websites.
+Cookies set by the website owner (in this case, Tino Mazorodze Blog LLC) are called "first-party cookies." Cookies set by parties other than the website owner are called "third-party cookies." Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics). The parties that set these third-party cookies can recognize your computer both when it visits the website in question and also when it visits certain other websites.
 
 ## Why do we use cookies?
 
@@ -102,7 +102,7 @@ The date at the top of this Cookie Policy indicates when it was last updated.
 
 If you have any questions about our use of cookies or other technologies, please email us at tinomaozordze.mt@gmail.com or by post to:
 
-Tech Digital Media LLC <br></br>
-178 Columbus Ave, Unit 237190 <br></br>
-New York, NY 10023 <br></br>
-United States <br></br>
+Tino Mazorodze Blog LLC<br></br>
+24 Hour, 7 Magamba Way<br></br>
+Chinhoyi<br></br>
+Zimbabwe<br></br>

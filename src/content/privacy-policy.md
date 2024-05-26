@@ -1,8 +1,8 @@
 # PRIVACY POLICY
 
-_Last updated April 28, 2023_
+_Last updated May 26, 2024_
 
-This privacy notice for Tech Digital Media LLC (doing business as tinomazorodze) ("tinomazorodze," "we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:
+This privacy notice for Tino Mazorodze Blog LLC (doing business as tinomazorodze.com) ("Company," "we," "us," and "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:
 Visit our website at https://www.tinomazorodze.com, or any website of ours that links to this privacy notice
 Engage with us in other related ways, including any sales, marketing, or events
 Questions or concerns? Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at tinomazorodze.mt@gmail.com.
@@ -335,7 +335,6 @@ We may update this privacy notice from time to time. The updated version will be
 
 If you have questions or comments about this notice, you may contact our Data Protection Officer (DPO) , Tino Mazorodze, by email at tino@tinomazorodze.com, by phone at (+263) 0717238876, or by post to:
 
-Tech Digital Media LLC<br></br>
 Tino Mazorodze<br></br>
 9938<br></br>
 Ruvimbo Phase 2<br></br>
@@ -344,10 +343,10 @@ Zimbabwe<br></br>
 
 If you have any further questions or comments, you may also contact us by post at the following corporate address:
 
-Tech Digital Media LLC<br></br>
-178 Columbus Ave, Unit 237190<br></br>
-New York, NY 10023<br></br>
-United States<br></br>
+Tino Mazorodze Blog LLC<br></br>
+24 Hour, 7 Magamba Way<br></br>
+Chinhoyi<br></br>
+Zimbabwe<br></br>
 
 ## 14. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
 
