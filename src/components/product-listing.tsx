@@ -47,7 +47,7 @@ export default function ProductListing(props: ProductListingProps) {
                 <Link
                   href={product.link.url}
                   target="_blank"
-                  rel={product.link.dofollow ? 'follow' : 'noopener nofollow'}
+                  rel={product.link.dofollow ? 'dofollow' : 'noopener nofollow'}
                   className="block w-[190px] rounded-md bg-teal-500 py-2 text-center text-sm font-medium text-white hover:bg-teal-700"
                 >
                   {product.link.text}
