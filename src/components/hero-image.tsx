@@ -18,7 +18,7 @@ export default function HeroImage(props: any) {
         />
       </div>
       {imageCredits && (
-        <small className="text-accent-5">
+        <small className="text-zinc-600">
           {'('}Image Credit: {imageCredits}
           {')'}
         </small>

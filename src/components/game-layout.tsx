@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/image'
 import { Star } from '@/icons'
 import Link from 'next/link'
+import { Linkify } from '@/lib/renderer'
 
 export default function GameLayout({
   game,
@@ -86,7 +87,7 @@ export default function GameLayout({
           </div>
         </div>
         <div className="mb-16">
-          <span className="text-accent-6 mb-2 block font-bold">
+          <span className="mb-2 block font-bold text-zinc-500">
             Popular user tags for this game
           </span>
           <ul className="flex flex-wrap gap-2">
@@ -148,7 +149,7 @@ export default function GameLayout({
         </div>
         <div className="mb-16">
           <h2 className="mb-4 text-4xl">Ratings and Reviews</h2>
-          <p className="text-accent-6 mb-8">
+          <p className="mb-8 text-zinc-500">
             Ratings and reviews are verified and are only from registered users
             on the platform
           </p>
@@ -192,13 +193,13 @@ export default function GameLayout({
           </div>
         </div>
         <div className="mb-16">
-          <h2 className="mb-4 text-4xl">{game.name} Guides and Tips</h2>
+          <h2 className="mb-4 text-4xl">Related Games</h2>
           <ul>
             {relatedGames.map((game, i) => (
               <li key={i}>
                 <Link
-                  href="#"
-                  className="border-accent-2 group flex gap-4 border-b py-8 md:gap-8"
+                  href={`/games/a/${Linkify(game.name)}`}
+                  className="group flex gap-4 border-b border-zinc-300 py-8 md:gap-8 dark:border-zinc-600"
                 >
                   <Image
                     src={urlForImage(game.seo.image)
@@ -213,11 +214,10 @@ export default function GameLayout({
                   <div>
                     <div className="mb-2 flex items-center">
                       <span
-                        className={`mr-2 block rounded-md p-1 text-sm ${Math.random() < 0.5 ? 'bg-blue' : 'bg-pink'}`}
+                        className={`mr-2 block rounded-md p-1 text-xs text-white ${Math.random() < 0.5 ? 'bg-blue-700' : 'bg-pink-600'}`}
                       >
-                        Game
+                        Top Tier
                       </span>
-                      <span>date</span>
                     </div>
                     <span className="mb-2 block group-hover:underline md:text-4xl">
                       {game.seo.title}
