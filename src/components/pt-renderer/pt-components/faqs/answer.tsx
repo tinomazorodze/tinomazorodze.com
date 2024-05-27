@@ -1,7 +1,7 @@
 export default function Answer({ children }: any) {
   return (
-    <div className="text-sm sm:text-base leading-relaxed text-left p-2 sm:p-4 text-md text-primary  bg-accent-2 rounded-bl-md rounded-br-md">
+    <div className="text-md text-primary rounded-bl-md rounded-br-md bg-zinc-200 p-2 text-left text-sm leading-relaxed  sm:p-4 sm:text-base dark:bg-zinc-700">
       {children}
     </div>
-  );
+  )
 }
