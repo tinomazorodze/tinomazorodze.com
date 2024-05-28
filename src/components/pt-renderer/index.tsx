@@ -14,6 +14,7 @@ import blockPartnersCard from './pt-components/partners-card'
 import blockProductSummary from './pt-components/product-summary'
 import blockTable from './pt-components/table'
 import blockButtonCta from './pt-components/button-cta'
+import blockEcocashCalculator from './pt-components/calculators/ecocash-calculator'
 import Superscript from './pt-components/sup'
 
 const PtComponents = (articles: any) => {
@@ -21,6 +22,7 @@ const PtComponents = (articles: any) => {
     blockProsCard,
     blockConsCard,
     imageModule,
+    blockEcocashCalculator,
     blockGreenCard: (props: any) => blockGreenCard(props, articles),
     blockPartnersCard,
     blockTable,

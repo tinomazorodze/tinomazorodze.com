@@ -14,6 +14,7 @@ import partnersCard from './objects/partners-card'
 import productSummary from './objects/product-summary'
 import prosCard from './objects/pros-card'
 import table from './objects/table'
+import ecocashCalculator from './objects/calculators/ecocash'
 
 const annotations = [linkEmail, linkExternal, linkInternal]
 
@@ -32,6 +33,7 @@ const objects = [
   productSummary,
   table,
   buttonCta,
+  ecocashCalculator,
 ]
 
 export const schemaTypes = [...documents, ...objects, ...annotations, ...blocks]

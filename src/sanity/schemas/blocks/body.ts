@@ -114,5 +114,9 @@ export default defineField({
       name: 'blockButtonCta',
       type: 'buttonCta.object',
     },
+    {
+      name: 'blockEcocashCalculator',
+      type: 'ecocashCalculator.object',
+    },
   ],
 })
