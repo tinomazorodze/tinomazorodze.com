@@ -57,7 +57,7 @@ export default function EcocashCalculator() {
               </select>
             </div>
           </div>
-          <div className="mb-4 mt-2 flex flex-col items-center">
+          <div className="relative mb-6 mt-2 flex w-full flex-col items-center">
             <label
               htmlFor="amount-range"
               className="mb-2 block text-sm font-medium text-white dark:text-gray-900"
@@ -65,14 +65,22 @@ export default function EcocashCalculator() {
               Amount
             </label>
             <input
-              id="amount-range"
-              min="1"
-              name="amount-range"
-              max="100000"
+              id="labels-range-input"
               type="range"
-              value="10"
-              className="h-2 w-full cursor-pointer rounded-lg bg-gray-200 dark:bg-gray-700"
-            ></input>
+              value="1000"
+              min="100"
+              max="1500"
+              className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700"
+            />
+            <span className="absolute -bottom-6 start-0 text-sm text-gray-300 dark:text-gray-800">
+              $1
+            </span>
+            <span className="absolute -bottom-6 start-1/2 -translate-x-1/2 text-sm text-gray-300 rtl:translate-x-1/2 dark:text-gray-800">
+              $500
+            </span>
+            <span className="absolute -bottom-6 end-0 text-sm text-gray-300 dark:text-gray-800">
+              $100000
+            </span>
           </div>
           {/* Signup to enter exact amounts */}
         </div>
