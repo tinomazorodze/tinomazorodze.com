@@ -12,9 +12,9 @@ import {
 
 import { ArticleType } from '@/lib/article'
 import formatDate from 'date-fns/format'
-import Photos from '@/components/home/photos'
-import Resume from '@/components/home/resume'
-import Newsletter from '@/components/home/newsletter'
+import Photos from '@/app/_components/home/photos'
+import Resume from '@/app/_components/home/resume'
+import Newsletter from '@/app/_components/home/newsletter'
 import { getAllArticles } from '@/sanity/lib/client'
 import { preparePageMetadata } from '../lib/metadata'
 import PersonSchema from '../_components/schemas/person-schema'
