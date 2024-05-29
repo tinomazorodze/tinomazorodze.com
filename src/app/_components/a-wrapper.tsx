@@ -1,6 +1,6 @@
 import { Footer } from '@/components/Footer'
 import Banner from './a-banner'
-import { Header } from './a-header'
+import Header from './a-header'
 
 export function Wrapper({ children }: { children: React.ReactNode }) {
   return (
