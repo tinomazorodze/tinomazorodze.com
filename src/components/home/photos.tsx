@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import image1 from '@/images/photos/image-1.png'
-import image2 from '@/images/photos/image-2.png'
-import image3 from '@/images/photos/image-3.png'
-import image4 from '@/images/photos/image-4.png'
-import image5 from '@/images/photos/image-5.png'
+import image1 from '@/images/photos/image-1.webp'
+import image2 from '@/images/photos/image-2.webp'
+import image3 from '@/images/photos/image-3.webp'
+import image4 from '@/images/photos/image-4.webp'
+import image5 from '@/images/photos/image-5.webp'
 import clsx from 'clsx'
 
 export default function Photos() {
@@ -23,6 +23,7 @@ export default function Photos() {
             <Image
               src={image}
               alt={`Home Image ${imageIndex}`}
+              loading="eager"
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
             />

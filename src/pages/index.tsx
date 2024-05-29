@@ -71,14 +71,14 @@ export default function Home(props: BlogProps) {
             together with me on my{' '}
             <Link
               href="https://github.com/tinomazorodze?tab=repositories"
-              className="text-teal-500"
+              className="font-medium text-teal-700 hover:underline"
             >
               open source projects on github
             </Link>{' '}
             . To my fellow gamers you can find me on{' '}
             <Link
               href="https://steamcommunity.com/id/techtinooe/"
-              className="text-teal-500"
+              className="font-medium text-teal-700 hover:underline"
             >
               steam as techtinooe
             </Link>
