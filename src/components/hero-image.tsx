@@ -11,8 +11,8 @@ export default function HeroImage(props: any) {
           src={urlForImage(image).width(800).height(450).quality(70).url()}
           alt={alt}
           className="h-auto w-full rounded-xl"
+          decoding="sync"
           title={alt}
-          sizes="100vw"
           height={450}
           width={800}
           priority
