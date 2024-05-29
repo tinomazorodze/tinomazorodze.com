@@ -7,7 +7,6 @@ import {
   InstagramIcon,
   LinkedInIcon,
   SteamIcon,
-  XIcon,
   YoutubeIcon,
 } from '@/components/SocialIcons'
 
@@ -17,11 +16,17 @@ import Photos from '@/components/home/photos'
 import Resume from '@/components/home/resume'
 import Newsletter from '@/components/home/newsletter'
 import { getAllArticles } from '@/sanity/lib/client'
-import Helmet from '@/components/helmet'
+import { preparePageMetadata } from '../lib/metadata'
+import PersonSchema from '../_components/schemas/person-schema'
 
-type BlogProps = {
-  articles: ArticleType[]
-}
+export const generateMetadata = () =>
+  preparePageMetadata({
+    title: 'Tino Mazorodze - Programmer, gamer, and tech enthusiast',
+    description:
+      'I’m Tino, a programmer and gamer (techtinoe). I love developing open source projects, playing MMO games and exploring the world of technology.',
+    pageUrl: '/',
+    imageUrl: '/assets/potrait.png',
+  })
 
 function Article({ article }: { article: ArticleType }) {
   return (
@@ -51,16 +56,12 @@ function SocialLink({
   )
 }
 
-export default function Home(props: BlogProps) {
-  const { articles } = props
+export default async function Home() {
+  const [articles]: [ArticleType[]] = await Promise.all([getAllArticles()])
 
   return (
     <>
-      <Helmet
-        metaTitle="Tino Mazorodze - Programmer, gamer, and tech enthusiast"
-        metaDescription="I’m Tino, a programmer and gamer (techtinoe). I love developing open source projects, playing MMO games and exploring the world of technology."
-        pageUrl="https://www.tinomazorodze.com"
-      />
+      <PersonSchema />
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
@@ -129,14 +130,4 @@ export default function Home(props: BlogProps) {
       </Container>
     </>
   )
-}
-
-export async function getStaticProps() {
-  const [articles]: [ArticleType[]] = await Promise.all([getAllArticles()])
-
-  return {
-    props: {
-      articles,
-    },
-  }
 }
