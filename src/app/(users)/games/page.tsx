@@ -1,29 +1,29 @@
-import { SimpleLayout } from '@/components/SimpleLayout'
-import Helmet from '@/components/helmet'
 import { Container } from '@/components/Container'
 import Link from 'next/link'
 import { getAllGames } from '@/sanity/lib/client'
 import { GameType } from '@/lib/game'
 import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/image'
-import { PlayIcon } from '@sanity/icons'
 import { EyeIcon } from '@heroicons/react/24/solid'
+import { preparePageMetadata } from '@/app/lib/metadata'
 
-type PageProps = {
-  games: Pick<
-    GameType,
-    '_id' | 'name' | 'slug' | '_updatedAt' | 'seo' | 'plainCoverImage'
-  >[]
-}
+export const generateMetadata = () =>
+  preparePageMetadata({
+    title: 'Gaming | TechTinoe Blog',
+    description: 'Tips, clips and insights from a midnight gamer',
+    pageUrl: '/games',
+    imageUrl: '',
+  })
 
-export default function Games({ games }: PageProps) {
+export default async function Games() {
+  const [games]: [
+    Pick<
+      GameType,
+      '_id' | 'name' | 'slug' | '_updatedAt' | 'seo' | 'plainCoverImage'
+    >[],
+  ] = await Promise.all([getAllGames()])
   return (
     <>
-      <Helmet
-        metaTitle="Gaming | TechTinoe"
-        metaDescription="Tips, clips and insights from a midnight gamer"
-        pageUrl="https://www.tinomazorodze.com/games"
-      />
       <Container className="mt-16 sm:mt-32">
         <header className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
@@ -89,14 +89,4 @@ export default function Games({ games }: PageProps) {
       </Container>
     </>
   )
-}
-
-export async function getStaticProps() {
-  const [games] = await Promise.all([getAllGames()])
-
-  return {
-    props: {
-      games,
-    },
-  }
 }
