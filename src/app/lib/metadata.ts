@@ -1,5 +1,6 @@
 import { truncateOnWord } from '@/lib/utils'
 import { Metadata } from 'next'
+import siteConfig from '@/content/site.json'
 
 type PageMetadataRecipe = {
   title: string
@@ -46,7 +47,7 @@ export const preparePageMetadata = (recipe: PageMetadataRecipe): Metadata => ({
   },
   openGraph: {
     description: truncateOnWord(recipe.description, 158),
-    url: recipe.pageUrl,
+    url: `${siteConfig.url.web}${recipe.pageUrl}`,
     type: 'website',
     siteName: 'Tino Mazorodze Blog',
     title: recipe.title,
@@ -54,7 +55,7 @@ export const preparePageMetadata = (recipe: PageMetadataRecipe): Metadata => ({
     locale: 'en_US',
   },
   alternates: {
-    canonical: recipe.pageUrl,
+    canonical: `${siteConfig.url.web}${recipe.pageUrl}`,
   },
   authors: [
     {

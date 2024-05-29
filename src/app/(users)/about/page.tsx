@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
@@ -9,11 +8,9 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.png'
-import PersonSchema from '@/app/_components/schemas/person-schema'
+import portraitImage from '@/images/portrait.webp'
 import { preparePageMetadata } from '@/app/lib/metadata'
-import WebsiteSchema from '@/app/_components/schemas/website-schema'
-import type { Viewport } from 'next'
+import PersonSchema from '@/app/_components/schemas/person-schema'
 
 export const generateMetadata = () =>
   preparePageMetadata({
@@ -23,21 +20,6 @@ export const generateMetadata = () =>
     pageUrl: '/about',
     imageUrl: '/assets/potrait.png',
   })
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  themeColor: [
-    {
-      media: '(prefers-color-scheme: light)',
-      color: '#f9fafb',
-    },
-    {
-      media: '(prefers-color-scheme: dark)',
-      color: '#1C1C1C',
-    },
-  ],
-}
 
 function SocialLink({
   className,
@@ -78,15 +60,16 @@ export default function About() {
   return (
     <>
       <PersonSchema />
-      <WebsiteSchema />
       <Container className="mt-16 sm:mt-32">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none">
               <Image
                 src={portraitImage}
+                loading="eager"
                 alt="Tino Mazorodze Potrait"
-                sizes="(min-width: 1024px) 32rem, 20rem"
+                height={500}
+                width={500}
                 className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
             </div>

@@ -10,7 +10,7 @@ import HeroImage from './hero-image'
 import PtRenderer from './pt-renderer'
 import { Card } from '@/components/Card'
 import ProductListing from './product-listing'
-import CommentSection from './coments'
+import CommentSection from './comments'
 
 function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
