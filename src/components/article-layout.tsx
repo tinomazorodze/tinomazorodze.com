@@ -56,7 +56,7 @@ export function ArticleLayout({
               </h1>
               <time
                 dateTime={article._updatedAt}
-                className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
+                className="order-first flex items-center text-base text-zinc-600 dark:text-zinc-400"
               >
                 <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
                 <span className="ml-3">
