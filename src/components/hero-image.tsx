@@ -8,13 +8,14 @@ export default function HeroImage(props: any) {
     <div className="mb-4">
       <div className="mb-1 block rounded-xl">
         <Image
-          src={urlForImage(image).width(1280).height(720).url()}
+          src={urlForImage(image).width(800).height(450).quality(70).url()}
           alt={alt}
           className="h-auto w-full rounded-xl"
-          loading="eager"
           title={alt}
-          height={1280}
-          width={720}
+          sizes="100vw"
+          height={450}
+          width={800}
+          priority
         />
       </div>
       {imageCredits && (
