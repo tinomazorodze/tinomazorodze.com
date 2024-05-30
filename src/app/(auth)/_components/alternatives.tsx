@@ -15,7 +15,7 @@ export function SignInAlt() {
         e.preventDefault()
         callBackHref(callbackUrl, '/sign-up')
       }}
-      className="font-semibold text-gray-800"
+      className="font-semibold text-teal-600 hover:underline"
     >
       Sign up
     </Link>
@@ -33,9 +33,9 @@ export function SignUpAlt() {
         e.preventDefault()
         callBackHref(callbackUrl, '/sign-in')
       }}
-      className="font-semibold text-gray-800"
+      className="font-semibold text-teal-600 hover:underline"
     >
-      Sign up
+      Sign in
     </Link>
   )
 }
