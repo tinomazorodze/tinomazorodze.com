@@ -18,6 +18,7 @@ function clamp(number: number, a: number, b: number) {
 
 export default function Header() {
   let isHomePage = usePathname() === '/'
+  const pathname = usePathname()
 
   let headerRef = useRef<React.ElementRef<'div'>>(null)
   let avatarRef = useRef<React.ElementRef<'div'>>(null)
@@ -204,7 +205,7 @@ export default function Header() {
                     href="/sign-in"
                     onClick={(e) => {
                       e.preventDefault()
-                      callBackHref(usePathname, '/sign-in')
+                      callBackHref(pathname, '/sign-in')
                     }}
                     className="rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
                   >
