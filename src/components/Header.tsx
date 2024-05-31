@@ -275,7 +275,7 @@ export function Header() {
             <div className="flex justify-end md:flex-1">
               <div className="pointer-events-auto flex items-center gap-2">
                 <ThemeToggle />
-                <Link
+                {/* <Link
                   href="/sign-in"
                   onClick={(e) => {
                     e.preventDefault()
@@ -284,7 +284,7 @@ export function Header() {
                   className="rounded-full bg-teal-700 px-3 py-2 text-white shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-teal-800  dark:ring-white/10 dark:hover:ring-white/20"
                 >
                   <span className="text-sm">Login</span>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

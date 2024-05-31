@@ -5,6 +5,7 @@ import Image from 'next/image'
 import programmerImage from '@/images/programmer.webp'
 import { RegisterForm } from '../_components/register-form'
 import AuthGoBack from '@/app/_components/auth-go-back'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Create Account | Sign Up ',
@@ -39,7 +40,9 @@ export default function SignUp() {
           className="h-full w-full object-cover"
         />
       </div>
-      <AuthGoBack />
+      <Suspense>
+        <AuthGoBack />
+      </Suspense>
     </div>
   )
 }

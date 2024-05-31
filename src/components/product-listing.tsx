@@ -13,7 +13,7 @@ export default function ProductListing(props: ProductListingProps) {
   const products = articleProducts.products
   const [showAll, setShowAll] = useState(false)
 
-  const initialDisplayCount = 3
+  const initialDisplayCount = 7
 
   if (!products || products.length === 0) {
     return <p>No products available.</p>
@@ -48,7 +48,7 @@ export default function ProductListing(props: ProductListingProps) {
                   href={product.link.url}
                   target="_blank"
                   rel={product.link.dofollow ? 'dofollow' : 'noopener nofollow'}
-                  className="block w-[190px] rounded-md bg-teal-500 py-2 text-center text-sm font-medium text-white hover:bg-teal-700"
+                  className="block w-[190px] rounded-md bg-teal-700 py-2 text-center text-sm font-medium text-white hover:bg-teal-700 dark:bg-teal-500"
                 >
                   {product.link.text}
                 </Link>

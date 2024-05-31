@@ -54,7 +54,9 @@ export default function Login() {
           </p>
         </Form>
       </div>
-      <AuthGoBack />
+      <Suspense>
+        <AuthGoBack />
+      </Suspense>
     </div>
   )
 }

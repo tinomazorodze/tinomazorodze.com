@@ -201,7 +201,7 @@ export default function Header() {
               <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto flex items-center gap-2">
                   <ThemeToggle />
-                  <Link
+                  {/* <Link
                     href="/sign-in"
                     onClick={(e) => {
                       e.preventDefault()
@@ -217,7 +217,7 @@ export default function Header() {
                     <span className="font-medium leading-none text-white">
                       TW
                     </span>
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </div>
