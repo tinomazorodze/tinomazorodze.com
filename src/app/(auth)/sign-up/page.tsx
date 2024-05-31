@@ -1,13 +1,9 @@
-import { SignUpAlt } from '../_components/alternatives'
-import { Suspense } from 'react'
 import { Metadata } from 'next'
 import { createUser, getUser } from '@/app/db'
 import { redirect } from 'next/navigation'
 import Image from 'next/image'
 import programmerImage from '@/images/programmer.webp'
 import { RegisterForm } from '../_components/register-form'
-import GoogleLogo from '@/icons/google'
-import { RegisterButton } from '../_components/register-button'
 
 export const metadata: Metadata = {
   title: 'Create Account | Sign Up ',
@@ -40,33 +36,7 @@ export default function SignUp() {
             this website.
           </p>
         </div>
-        <RegisterForm action={register}>
-          <div className="mb-4 flex w-full items-center justify-center">
-            <div className="h-[1px] w-full bg-gray-600"></div>
-            <div className="mx-4 text-xs text-gray-300">
-              OR&nbsp;
-              <span className="hidden sm:inline">CONTINUE&nbsp;WITH</span>
-            </div>
-            <div className="h-[1px] w-full bg-gray-600"></div>
-          </div>
-          <div className="flex h-10 w-full cursor-pointer items-center justify-center gap-4 rounded-md border border-zinc-600 text-sm text-white transition-all hover:bg-zinc-600 focus:outline-none">
-            <GoogleLogo />
-            <span>Google</span>
-          </div>
-          <p className="text-center text-sm text-gray-300">
-            {'Already have an account? '}
-            <Suspense>
-              <SignUpAlt />
-            </Suspense>
-            {' instead.'}
-          </p>
-          <div className="flex items-center gap-4">
-            <div className="flex h-10 w-full flex-1 cursor-pointer items-center justify-center rounded-md bg-zinc-700 text-sm text-white transition-all hover:bg-zinc-600">
-              Back
-            </div>
-            <RegisterButton>Next</RegisterButton>
-          </div>
-        </RegisterForm>
+        <RegisterForm action={register} />
       </div>
       <div className="hidden md:contents lg:relative lg:block lg:flex-1">
         <Image
