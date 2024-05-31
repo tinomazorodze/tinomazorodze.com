@@ -1,9 +1,6 @@
-import type { ClassValue } from 'clsx'
-import { clsx } from 'clsx'
-
-export async function callBackHref(callbackUrl: any, url: string) {
+export async function callBackHref(gobackUrl: any, url: string) {
   window.location.href = `${url}?${new URLSearchParams({
-    callbackUrl,
+    gobackUrl,
   })}`
 }
 

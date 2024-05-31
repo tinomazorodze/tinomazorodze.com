@@ -5,6 +5,7 @@ import { type Metadata } from 'next'
 import { signIn } from '@/app/auth'
 import GoogleLogo from '@/icons/google'
 import { LoginButton } from '../_components/login-button'
+import AuthGoBack from '@/app/_components/auth-go-back'
 
 export const metadata: Metadata = {
   title: 'Welcome Back | Sign In ',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Login() {
   return (
-    <div className="my-20 flex h-full w-full items-center justify-center">
+    <div className="relative my-20 flex h-full w-full items-center justify-center">
       <div className="z-10 mx-4 w-full max-w-md overflow-hidden rounded-2xl border border-zinc-600 shadow-xl">
         <div className="flex flex-col items-center justify-center space-y-3 border-b border-zinc-600 bg-zinc-900 px-4 py-6 pt-8 text-center text-white sm:px-16">
           <h3 className="text-xl font-semibold">Sign In</h3>
@@ -53,6 +54,7 @@ export default function Login() {
           </p>
         </Form>
       </div>
+      <AuthGoBack />
     </div>
   )
 }

@@ -6,14 +6,14 @@ import { useSearchParams } from 'next/navigation'
 
 export function SignInAlt() {
   const searchParams = useSearchParams()
-  const callbackUrl = searchParams?.get('callbackUrl')?.toString()
+  const gobackUrl = searchParams?.get('gobackUrl')?.toString()
 
   return (
     <Link
       href="/sign-up"
       onClick={(e) => {
         e.preventDefault()
-        callBackHref(callbackUrl, '/sign-up')
+        callBackHref(gobackUrl, '/sign-up')
       }}
       className="font-semibold text-teal-600 hover:underline"
     >
@@ -24,14 +24,14 @@ export function SignInAlt() {
 
 export function SignUpAlt() {
   const searchParams = useSearchParams()
-  const callbackUrl = searchParams?.get('callbackUrl')?.toString()
+  const gobackUrl = searchParams?.get('gobackUrl')?.toString()
 
   return (
     <Link
       href="/sign-in"
       onClick={(e) => {
         e.preventDefault()
-        callBackHref(callbackUrl, '/sign-in')
+        callBackHref(gobackUrl, '/sign-in')
       }}
       className="font-semibold text-teal-600 hover:underline"
     >
@@ -42,8 +42,8 @@ export function SignUpAlt() {
 
 export function BackToSite() {
   const searchParams = useSearchParams()
-  const callbackUrl = searchParams?.get('callbackUrl')?.toString()
+  const gobackUrl = searchParams?.get('gobackUrl')?.toString()
 
-  if (callbackUrl != '') {
+  if (gobackUrl != '') {
   }
 }

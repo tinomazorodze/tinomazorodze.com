@@ -59,11 +59,9 @@ const FormMessage = React.forwardRef<
   const body = error ? String(error?.message) : children
 
   if (!body) {
-    console.log('hello world 2')
     return null
   }
 
-  console.log('hello world 1')
   return (
     <p ref={ref} className="text-xs text-red-500" id={formMessageId}>
       {body}
