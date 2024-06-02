@@ -11,6 +11,7 @@ import PtRenderer from './pt-renderer'
 import { Card } from '@/components/Card'
 import ProductListing from './product-listing'
 import CommentSection from './comments'
+import TblContents from './tbl-contents'
 
 function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -70,6 +71,7 @@ export function ArticleLayout({
               image={article.seo.image}
             />
             {article.products && <ProductListing articleProducts={article} />}
+            <TblContents article={article} />
             <PtRenderer body={article.body} articles={articles} />
             <CommentSection />
             <div className="mt-20">
