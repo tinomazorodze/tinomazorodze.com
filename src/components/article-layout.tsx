@@ -12,6 +12,8 @@ import { Card } from '@/components/Card'
 import ProductListing from './product-listing'
 import CommentSection from './comments'
 import TblContents from './tbl-contents'
+import Link from 'next/link'
+import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid'
 
 function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -90,6 +92,13 @@ export function ArticleLayout({
                     })}
                   </ul>
                 </div>
+                <Link
+                  href="/blog"
+                  className="mx-auto mt-10 flex w-fit items-center gap-2 rounded-md border border-zinc-300 px-3 py-2 hover:bg-zinc-300 dark:border-zinc-600 dark:hover:bg-zinc-600"
+                >
+                  View More Articles
+                  <ChevronDoubleRightIcon className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </article>
