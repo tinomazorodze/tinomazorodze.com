@@ -45,6 +45,16 @@ export function RegisterForm({ action }: { action: any }) {
   const [showPassword, setShowPassword] = useState(false)
   const [step, setStep] = useState<SignUpStep>('BASIC_DETAILS')
 
+  const handleSubmit = async (formData: TSignUpFormV2Schema) => {
+    const form = new FormData()
+    form.append('name', formData.name)
+    form.append('email', formData.email)
+    form.append('password', formData.password)
+    form.append('username', formData.username)
+
+    await action(form)
+  }
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
   }
@@ -92,7 +102,7 @@ export function RegisterForm({ action }: { action: any }) {
       )}
       <Form {...form}>
         <form
-          action={action}
+          onSubmit={form.handleSubmit(handleSubmit)}
           className="flex flex-col space-y-4 bg-zinc-900 px-4 py-8 sm:px-10"
         >
           {step === 'BASIC_DETAILS' && (
