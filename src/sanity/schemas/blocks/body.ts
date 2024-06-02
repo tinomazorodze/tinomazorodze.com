@@ -1,4 +1,7 @@
 import { FormatColor } from '@/icons'
+import EcocashLogo from '@/icons/ecocash-logo'
+import MukuruLogo from '@/icons/mukuru-logo'
+import OneMoneyLogo from '@/icons/onemoney-logo'
 import gradientText from '@/sanity/components/gradient-text'
 import {
   CheckmarkCircleIcon,
@@ -117,6 +120,17 @@ export default defineField({
     {
       name: 'blockEcocashCalculator',
       type: 'ecocashCalculator.object',
+      icon: EcocashLogo,
+    },
+    {
+      name: 'blockOneMoneyCalculator',
+      type: 'onemoneyCalculator.object',
+      icon: OneMoneyLogo,
+    },
+    {
+      name: 'blockMukuruCalculator',
+      type: 'mukuruCalculator.object',
+      icon: MukuruLogo,
     },
   ],
 })

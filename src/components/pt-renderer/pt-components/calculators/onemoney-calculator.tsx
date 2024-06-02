@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Calculator, calclulators } from '.'
 import { LaunchIcon } from '@sanity/icons'
 
-export default function EcocashCalculator() {
+export default function OneMoneyCalculator() {
   return (
     <div
       className="mt-4 rounded-md border border-zinc-300 dark:border-zinc-600"

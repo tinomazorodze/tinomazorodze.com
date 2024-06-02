@@ -71,7 +71,7 @@ export function ArticleLayout({
               image={article.seo.image}
             />
             {article.products && <ProductListing articleProducts={article} />}
-            <TblContents article={article} />
+            {article.subHeadings && <TblContents article={article} />}
             <PtRenderer body={article.body} articles={articles} />
             <CommentSection />
             <div className="mt-20">
