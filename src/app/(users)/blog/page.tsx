@@ -31,3 +31,5 @@ export default async function ArticlesIndex() {
     </SimpleLayout>
   )
 }
+
+export const revalidate = 10
