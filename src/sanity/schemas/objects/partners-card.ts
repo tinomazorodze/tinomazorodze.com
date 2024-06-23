@@ -7,11 +7,6 @@ export default defineField({
   type: 'object',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    },
-    {
       name: 'partners',
       type: 'array',
       of: [
@@ -27,6 +22,16 @@ export default defineField({
               name: 'image',
               title: 'Image',
               type: 'image',
+            },
+            {
+              name: 'imageRatio',
+              title: 'Image Ratio',
+              type: 'string',
+              options: {
+                layout: 'radio',
+                direction: 'horizontal',
+                list: ['1x1', '5x1'],
+              },
             },
             {
               name: 'startingPrice',
