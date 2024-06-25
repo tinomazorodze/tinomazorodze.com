@@ -2,7 +2,7 @@ export default function blockTable({ rows }: { rows: string[] }) {
   return (
     <table className="mb-6 w-full">
       <thead>
-        <tr className="bg-slate-900 text-white">
+        <tr className="bg-slate-900 text-white dark:bg-white dark:text-slate-900">
           {rows[0].split('|').map((cell, i) => (
             <th
               key={i}
@@ -15,7 +15,10 @@ export default function blockTable({ rows }: { rows: string[] }) {
       </thead>
       <tbody>
         {rows.slice(1).map((row, i) => (
-          <tr key={i} className="odd:bg-primary even:bg-zinc-100">
+          <tr
+            key={i}
+            className="odd:bg-primary even:bg-zinc-100 dark:even:bg-white/10"
+          >
             {row.split('|').map((cell, i) => (
               <td
                 key={i}
