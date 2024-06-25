@@ -1,5 +1,5 @@
-import { ThListIcon } from "@sanity/icons";
-import { defineField } from "sanity";
+import { ThListIcon } from '@sanity/icons'
+import { defineField } from 'sanity'
 
 export default defineField({
   name: 'table.object',
@@ -9,7 +9,8 @@ export default defineField({
     {
       name: 'rows',
       title: 'Rows',
-      description: 'Each row is a string array of the same length as the header e.g. "1", "2", "3"',
+      description:
+        'Each row is a string array of the same length as the header e.g. "1", "2", "3"',
       type: 'array',
       of: [{ type: 'string' }],
     },
@@ -19,13 +20,13 @@ export default defineField({
       rows: 'rows',
     },
     prepare(selection) {
-      const { rows } = selection;
-      const columnCount = rows[0].split(',').length;
+      const { rows } = selection
+      const columnCount = rows[0].split('|').length
       return {
         title: 'Table',
         subtitle: `${rows.length} rows with ${columnCount} columns each`,
         media: ThListIcon,
-      };
+      }
     },
-  }
+  },
 })

@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const Question: React.FC<Props> = ({ question, children }) => {
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(true)
 
   const toggleAnswer = () => {
     setIsActive(!isActive)
