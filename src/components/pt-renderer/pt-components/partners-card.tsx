@@ -92,22 +92,22 @@ export default function blockPartnersCard(props: any) {
         </div>
       </div>
       <div className="custom-scrollbar-h overflow-x-auto">
-        <ul className="mx-auto flex w-fit space-x-4 py-2">
+        <ul className="mx-auto flex w-fit flex-col space-y-4 py-2 lg:flex-row lg:space-x-4 lg:space-y-0">
           {partners.map((partner: any, index: any) => (
             <li
               key={index}
-              className="h-[350px] w-[300px] rounded-md border border-zinc-300 bg-white p-4 dark:border-zinc-600 dark:bg-zinc-900"
+              className="mx-auto w-full rounded-md border border-zinc-300 bg-white p-4 md:max-w-[300px] lg:h-[350px] lg:w-[300px] dark:border-zinc-600 dark:bg-zinc-900"
             >
               {partner.imageRatio === '1x1' ? (
                 <Display11 partner={partner} />
               ) : (
                 <Display51 partner={partner} />
               )}
-              <div className="text-accent-6 flex justify-between border-b border-zinc-300 pb-2 text-sm dark:border-zinc-600">
+              <div className="text-accent-6 flex justify-between border-zinc-300 pb-2 text-sm lg:border-b dark:border-zinc-600">
                 <div>Starting Price in Zimbabwe</div>
                 <div className="font-bold">{partner.startingPrice}</div>
               </div>
-              <ul className="text-sm text-zinc-600 dark:text-zinc-400">
+              <ul className="hidden text-sm text-zinc-600 lg:block dark:text-zinc-400">
                 {partner.features.map((feature: any, index: any) => (
                   <li key={index} className="flex justify-between py-2">
                     <div>{feature}</div>
