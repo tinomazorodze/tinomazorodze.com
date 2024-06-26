@@ -116,8 +116,8 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export default function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'MazTech Inc',
-      title: 'CEO',
+      company: 'Xfinity Digital Zimbabwe',
+      title: 'Founder & CEO',
       logo: logoMazTech,
       start: '2024',
       end: {
