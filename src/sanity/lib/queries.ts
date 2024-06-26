@@ -9,6 +9,14 @@ export const allArticlesQuery = groq`*[_type == "article"] | order(date desc, _u
   seo,
 }`
 
+export const homeArticlesQuery = groq`*[_type == "article" && isPinned] | order(date desc, _updatedAt desc) {
+  _id,
+  title,
+  slug,
+  _updatedAt,
+  seo,
+}`
+
 export const allGamesQuery = groq`*[_type == "game"] | order(date desc, _updatedAt desc) {
   _id,
   name,

@@ -15,9 +15,10 @@ import formatDate from 'date-fns/format'
 import Photos from '@/app/_components/home/photos'
 import Resume from '@/app/_components/home/resume'
 import Newsletter from '@/app/_components/home/newsletter'
-import { getAllArticles } from '@/sanity/lib/client'
+import client, { getAllArticles } from '@/sanity/lib/client'
 import { preparePageMetadata } from '../lib/metadata'
 import PersonSchema from '../_components/schemas/person-schema'
+import { homeArticlesQuery } from '@/sanity/lib/queries'
 
 export const generateMetadata = () =>
   preparePageMetadata({
@@ -57,7 +58,9 @@ function SocialLink({
 }
 
 export default async function Home() {
-  const [articles]: [ArticleType[]] = await Promise.all([getAllArticles()])
+  // const [articles]: [ArticleType[]] = await Promise.all([getAllArticles()])
+
+  const articles: ArticleType[] = await client.fetch(homeArticlesQuery)
 
   return (
     <>

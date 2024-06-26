@@ -10,7 +10,6 @@ export type ArticleType = {
   }
   title: string
   hasProductListing: boolean
-  optimizeFor: 'reading' | 'linkClick' | 'both'
   products?: {
     name: string
     bestFor: string
@@ -25,7 +24,7 @@ export type ArticleType = {
       dofollow: boolean
     }
   }[]
-  tag: string
+  isPinned: boolean
   seo: {
     title: string
     description: string

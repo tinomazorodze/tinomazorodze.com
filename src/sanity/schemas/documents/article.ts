@@ -28,24 +28,6 @@ export default defineType({
       type: 'string',
       title: 'Title',
     },
-
-    {
-      name: 'tag',
-      type: 'string',
-      title: 'Tag',
-      options: {
-        layout: 'radio',
-        direction: 'horizontal',
-        list: ['games', 'programming', 'tech', 'zim'],
-      },
-    },
-    {
-      name: 'game',
-      title: 'Game',
-      type: 'reference',
-      to: [{ type: 'game' }],
-      hidden: ({ parent }) => parent.tag != 'games',
-    },
     {
       name: 'seo',
       type: 'object',
@@ -88,20 +70,6 @@ export default defineType({
       title: 'Has Product Listing',
       type: 'boolean',
       initialValue: false,
-    },
-    {
-      name: 'optimizeFor',
-      title: 'Optimize For',
-      type: 'string',
-      options: {
-        layout: 'radio',
-        direction: 'horizontal',
-        list: [
-          { title: 'Reading', value: 'reading' },
-          { title: 'Link Click', value: 'linkClick' },
-          { title: 'Both', value: 'both' },
-        ],
-      },
     },
     {
       name: 'products',
@@ -204,17 +172,9 @@ export default defineType({
       type: 'body',
     },
     {
-      name: 'displayAds',
-      title: 'Display Ads',
-      type: 'string',
-      options: {
-        layout: 'radio',
-        direction: 'horizontal',
-        list: [
-          { title: 'Off', value: 'off' },
-          { title: 'On', value: 'on' },
-        ],
-      },
+      name: 'isPinned',
+      title: 'Pin to top',
+      type: 'boolean',
     },
     {
       name: 'relatedArticles',
