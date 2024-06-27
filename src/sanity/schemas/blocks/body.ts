@@ -8,6 +8,7 @@ import {
   CloseCircleIcon,
   HelpCircleIcon,
   ImageIcon,
+  ImagesIcon,
   ThListIcon,
 } from '@sanity/icons'
 import { defineField } from 'sanity'
@@ -100,6 +101,11 @@ export default defineField({
       name: 'imageModule',
       type: 'image.object',
       icon: ImageIcon,
+    },
+    {
+      name: 'imagesModule',
+      type: 'imageCarousel.object',
+      icon: ImagesIcon,
     },
     {
       name: 'blockGreenCard',

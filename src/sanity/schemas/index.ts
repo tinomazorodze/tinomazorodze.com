@@ -17,6 +17,7 @@ import table from './objects/table'
 import ecocashCalculator from './objects/calculators/ecocash'
 import onemoneyCalculator from './objects/calculators/onemoney'
 import mukuruCalculator from './objects/calculators/mukuru'
+import imageCarousel from './objects/image-carousel'
 
 const annotations = [linkEmail, linkExternal, linkInternal]
 
@@ -38,6 +39,7 @@ const objects = [
   ecocashCalculator,
   onemoneyCalculator,
   mukuruCalculator,
+  imageCarousel,
 ]
 
 export const schemaTypes = [...documents, ...objects, ...annotations, ...blocks]

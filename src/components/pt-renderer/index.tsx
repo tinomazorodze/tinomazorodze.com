@@ -18,12 +18,14 @@ import blockEcocashCalculator from './pt-components/calculators/ecocash-calculat
 import blockOneMoneyCalculator from './pt-components/calculators/onemoney-calculator'
 import blockMukuruCalculator from './pt-components/calculators/mukuru-calculator'
 import Superscript from './pt-components/sup'
+import imageCarouselModule from './pt-components/image-carousel'
 
 const PtComponents = (articles: any) => {
   return {
     blockProsCard,
     blockConsCard,
     imageModule,
+    imagesModule: imageCarouselModule,
     blockEcocashCalculator,
     blockOneMoneyCalculator,
     blockMukuruCalculator,
