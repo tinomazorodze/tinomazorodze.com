@@ -37,7 +37,7 @@ function Tool({
 
 export const generateMetadata = () =>
   preparePageMetadata({
-    title: 'Tech | Tino Mazorodze Blog',
+    title: 'Gadgets and Software Tino Uses',
     description:
       "From cutting-edge software to the latest gadgets, explore Tino's personal recommendations and discover the tools that help shape his projects and productivity.",
     pageUrl: '/tech',

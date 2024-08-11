@@ -10,11 +10,7 @@ export default function Document() {
         async
         src={`https://www.googletagmanager.com/gtag/js?id='${process.env.GA_SECRET}'`}
       />
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5335750983677223"
-        crossOrigin="anonymous"
-      />
+
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -24,6 +20,14 @@ export default function Document() {
           gtag('config', '${process.env.GA_SECRET}');
         `,
         }}
+      />
+
+      {/* Google Adsense Scripts  */}
+
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5335750983677223"
+        crossOrigin="anonymous"
       />
 
       {/* For ad blocker users */}

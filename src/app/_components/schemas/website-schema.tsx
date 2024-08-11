@@ -8,7 +8,7 @@ export default function WebsiteSchema() {
       item={{
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'Tino Mazorodze Blog',
+        name: 'Tino Mazorodze',
         url: siteConfig.url.web,
       }}
     />

@@ -1,6 +1,4 @@
 import Link from 'next/link'
-
-import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
@@ -10,15 +8,9 @@ import {
   YoutubeIcon,
 } from '@/components/SocialIcons'
 
-import { ArticleType } from '@/lib/article'
-import formatDate from 'date-fns/format'
 import Photos from '@/app/_components/home/photos'
-import Resume from '@/app/_components/home/resume'
-import Newsletter from '@/app/_components/home/newsletter'
-import client, { getAllArticles } from '@/sanity/lib/client'
 import { preparePageMetadata } from '../lib/metadata'
 import PersonSchema from '../_components/schemas/person-schema'
-import { homeArticlesQuery } from '@/sanity/lib/queries'
 
 export const generateMetadata = () =>
   preparePageMetadata({
@@ -26,23 +18,8 @@ export const generateMetadata = () =>
     description:
       'I’m Tino, a programmer and gamer (techtinoe). I love developing open source projects, playing MMO games and exploring the world of technology.',
     pageUrl: '/',
-    imageUrl: '/assets/potrait.png',
+    imageUrl: 'https://www.tinomazorodze.com/banner.webp',
   })
-
-function Article({ article }: { article: ArticleType }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/blog/${article.slug.current}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article._updatedAt} decorate>
-        {formatDate(new Date(article._updatedAt), 'MMMM d, yyyy')}
-      </Card.Eyebrow>
-      <Card.Description>{article.seo.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
 
 function SocialLink({
   icon: Icon,
@@ -58,10 +35,6 @@ function SocialLink({
 }
 
 export default async function Home() {
-  // const [articles]: [ArticleType[]] = await Promise.all([getAllArticles()])
-
-  const articles: ArticleType[] = await client.fetch(homeArticlesQuery)
-
   return (
     <>
       <PersonSchema />
@@ -75,18 +48,18 @@ export default async function Home() {
             together with me on my{' '}
             <Link
               href="https://github.com/tinomazorodze?tab=repositories"
-              className="font-medium text-teal-700 hover:underline"
+              className="font-medium text-yellow-600 hover:underline"
             >
               open source projects on github
             </Link>{' '}
             . To my fellow gamers you can find me on{' '}
             <Link
               href="https://steamcommunity.com/id/techtinooe/"
-              className="font-medium text-teal-700 hover:underline"
+              className="font-medium text-yellow-600 hover:underline"
             >
               steam as techtinooe
             </Link>
-            . I usually play Dota 2, Counter Strike and Software Inc.
+            . I usually play Dota 2 and Software Inc.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -118,19 +91,6 @@ export default async function Home() {
         </div>
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.slice(0, 4).map((article) => (
-              <Article key={article.slug.current} article={article} />
-            ))}
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
-            <Resume />
-          </div>
-        </div>
-      </Container>
     </>
   )
 }

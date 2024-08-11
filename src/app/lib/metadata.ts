@@ -51,7 +51,13 @@ export const preparePageMetadata = (recipe: PageMetadataRecipe): Metadata => ({
     type: 'website',
     siteName: 'Tino Mazorodze Blog',
     title: recipe.title,
-    images: [recipe.imageUrl],
+    images: [
+      {
+        url: recipe.imageUrl,
+        height: '1200',
+        width: '675',
+      },
+    ],
     locale: 'en_US',
   },
   alternates: {

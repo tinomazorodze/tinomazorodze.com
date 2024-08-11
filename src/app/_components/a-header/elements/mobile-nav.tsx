@@ -67,9 +67,8 @@ export default function MobileNavigation(
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/blog">Blog</MobileNavItem>
-                <MobileNavItem href="/programming">Programming</MobileNavItem>
-                <MobileNavItem href="/games">Gaming</MobileNavItem>
+                <MobileNavItem href="/projects">Projects</MobileNavItem>
+                <MobileNavItem href="/games">Games</MobileNavItem>
                 <MobileNavItem href="/tech">Tech</MobileNavItem>
               </ul>
             </nav>

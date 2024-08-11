@@ -1,7 +1,7 @@
 {
-  "name": "Tino Mazorodze Blog",
+  "name": "Tino Mazorodze",
   "short_name": "tinomazorodze.com",
-  "description": "Tino's personal website and blog.",
+  "description": "Tino's personal website.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

@@ -12,7 +12,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className="transition hover:text-teal-500 dark:hover:text-teal-400"
+      className="transition hover:text-yellow-500 dark:hover:text-yellow-400"
     >
       {children}
     </Link>
@@ -27,20 +27,6 @@ export function Footer() {
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                <Link
-                  href="/policies/privacy"
-                  rel="noopener nofollow"
-                  className="transition hover:text-teal-500 dark:hover:text-teal-400"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  href="/policies/cookies"
-                  rel="noopener nofollow"
-                  className="transition hover:text-teal-500 dark:hover:text-teal-400"
-                >
-                  Cookie Policy
-                </Link>
                 <NavLink href="/about">About</NavLink>
               </div>
               <p className="text-sm text-zinc-500 dark:text-zinc-300">

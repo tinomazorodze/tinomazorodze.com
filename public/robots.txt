@@ -1,5 +1,5 @@
 User-agent: *
 
 Disallow: /policies/*
-Sitemap: https://www.tinomazorodze.com/Sitemap.xml
+Sitemap: https://www.tinomazorodze.com/sitemap.xml
 

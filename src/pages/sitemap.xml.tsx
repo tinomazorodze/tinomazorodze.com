@@ -1,16 +1,5 @@
-import { ArticleType } from '@/lib/article'
-import { getAllArticles } from '@/sanity/lib/client'
-
 type SitemapLocation = {
   url: string
-  changefreq?:
-    | 'always'
-    | 'hourly'
-    | 'daily'
-    | 'weekly'
-    | 'monthly'
-    | 'yearly'
-    | 'never'
   priority: number
   lastmod?: Date
 }
@@ -19,39 +8,28 @@ type SitemapLocation = {
 const defaultUrls: SitemapLocation[] = [
   {
     url: '/',
-    changefreq: 'weekly',
     priority: 1.0,
-    lastmod: new Date(),
-  },
-  {
-    url: '/blog',
-    changefreq: 'weekly',
-    priority: 1.0,
-    lastmod: new Date(),
-  },
-  {
-    url: '/games',
-    changefreq: 'weekly',
-    priority: 1.0,
-    lastmod: new Date(),
+    lastmod: new Date('2024-07-16T07:56:32.687Z'),
   },
   {
     url: '/about',
-    changefreq: 'yearly',
     priority: 1.0,
-    lastmod: new Date('2024-05-03T07:56:32.687Z'),
+    lastmod: new Date('2024-07-16T07:56:32.687Z'),
   },
   {
-    url: '/programming',
-    changefreq: 'yearly',
+    url: '/games',
     priority: 1.0,
-    lastmod: new Date('2024-05-03T08:38:46.687Z'),
+    lastmod: new Date('2024-07-16T07:56:32.687Z'),
+  },
+  {
+    url: '/projects',
+    priority: 1.0,
+    lastmod: new Date('2024-07-16T07:56:32.687Z'),
   },
   {
     url: '/tech',
-    changefreq: 'yearly',
     priority: 1.0,
-    lastmod: new Date('2024-05-04T10:04:22.687Z'),
+    lastmod: new Date('2024-07-16T07:56:32.687Z'),
   },
 ]
 
@@ -63,7 +41,6 @@ const createSitemap = (locations: SitemapLocation[]) => {
         .map((location) => {
           return `<url>
                     <loc>${baseUrl}${location.url}</loc>
-                    <changefreq>${location.changefreq}</changefreq>
                     <priority>${location.priority}</priority>
                     ${
                       location.lastmod
@@ -82,23 +59,8 @@ export default function SiteMap() {
 }
 
 export async function getServerSideProps({ res }: { res: any }) {
-  // Get list of Post urls
-  const [articles]: [ArticleType[]] = await Promise.all([getAllArticles()])
-  const articleUrls: SitemapLocation[] = articles
-    .filter(({ slug = '' }) => slug)
-    .map((article) => {
-      return {
-        url: `/blog/${article.slug.current}`,
-        priority: 0.9,
-        changefreq: 'monthly',
-        lastmod: new Date(article._updatedAt),
-      }
-    })
-
-  // ... get more routes here
-
   // Return the default urls, combined with dynamic urls above
-  const locations = [...defaultUrls, ...articleUrls]
+  const locations = [...defaultUrls]
 
   // Set response to XML
   res.setHeader('Content-Type', 'text/xml')

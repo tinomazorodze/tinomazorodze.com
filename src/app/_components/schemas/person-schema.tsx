@@ -10,7 +10,7 @@ export default function PersonSchema() {
         '@type': 'Person',
         name: 'Tino Mazorodze',
         alternateName: 'TechTinoe',
-        jobTitle: 'Software Architect',
+        jobTitle: 'Fullstack Engineer',
         email: 'tinomazorodze.mt@gmail.com',
         knowsAbout: ['Programming', 'Gaming', 'Technology'],
         sameAs: [

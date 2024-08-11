@@ -12,9 +12,6 @@ export function Wrapper({ children }: { children: React.ReactNode }) {
       </div>
       {/* TODO: I change w-full to w-[100vw] but it should work with w-full */}
       <div className="relative w-full">
-        <aside>
-          <Banner />
-        </aside>
         <Header />
         <main className="flex-auto">{children}</main>
         <Footer />

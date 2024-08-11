@@ -36,9 +36,9 @@ function SocialLink({
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-yellow-500 dark:text-zinc-200 dark:hover:text-yellow-500"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-yellow-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -76,8 +76,7 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-              I’m Tino Mazorodze (AKA TechTinoe). I love programming and playing
-              MMO Games.
+              I’m Tino, a software developer, tech enthusiast and gamer.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
@@ -99,15 +98,15 @@ export default function About() {
                 If it hasn’t been clear enough then know that I am a total nerd
                 🤣 so my favourite video games are complicated and have quite a
                 steep learning curve. Dota 2 is my number 1 favourite game. I
-                play dota everyday and its been painful being stuck in Herald if
-                you know what i mean. Apart from Dota I usually play simulators
-                like Software Inc, Big Ambitions and Euro Trucks.
+                play Dota 2 everyday and its been painful being stuck in Herald
+                if you know what i mean. Apart from Dota I usually play business
+                simulators like Software Inc and Big Ambitions.
               </p>
               <p>
-                Right now I am an aspiring software engineering student at the
-                University of Zimbabwe. I am yet to start my 4 year course but I
-                will regularly post content on my blog and youtube channel along
-                the way.
+                Right now I am a software engineering student at the University
+                of Zimbabwe. I just started my 4 year course but I will
+                regularly post content on my blog and youtube channel along the
+                way.
               </p>
             </div>
           </div>
