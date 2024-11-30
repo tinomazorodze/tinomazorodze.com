@@ -44,8 +44,9 @@ export default async function Home() {
             Daylight Programmer & Midnight Gamer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Tino. To my fellow programmers you can contribute and work
-            together with me on my{' '}
+            I’m Tino Mazorodze, a frontend developer and Dota 2 player. To my
+            fellow programmers you can contribute and work together with me on
+            my{' '}
             <Link
               href="https://github.com/tinomazorodze?tab=repositories"
               className="font-medium text-yellow-600 hover:underline"
@@ -59,7 +60,7 @@ export default async function Home() {
             >
               steam as techtinooe
             </Link>
-            . I usually play Dota 2 and Software Inc.
+            .
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
