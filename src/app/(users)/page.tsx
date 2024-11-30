@@ -73,7 +73,7 @@ export default async function Home() {
               icon={YoutubeIcon}
             />
             <SocialLink
-              href="https://www.instagram.com/mazorodze.hq"
+              href="https://www.instagram.com/techtinoe"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />

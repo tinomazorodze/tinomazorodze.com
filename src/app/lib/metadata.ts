@@ -38,8 +38,8 @@ export const preparePageMetadata = (recipe: PageMetadataRecipe): Metadata => ({
   },
 
   twitter: {
-    site: '@MazorodzeHQ',
-    creator: '@MazorodzeHQ',
+    site: '@TechTinoe',
+    creator: '@TechTinoe',
     card: 'summary_large_image',
     title: recipe.title,
     description: recipe.description,

@@ -63,7 +63,7 @@ const ArticleHelmet = (props: HelmetProps) => {
         {/* Name Meta Tags */}
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#000000" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content={`${siteConfig.url.web}/robots.txt`} />
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="description" content={metaDescription} />
@@ -112,8 +112,8 @@ const ArticleHelmet = (props: HelmetProps) => {
 
         {/* Twitter Cards */}
         <meta name="twitter:image" content={metaImage} />
-        <meta name="twitter:creator" content={`@MazorodzeHQ`} />
-        <meta name="twitter:site" content={`@MazorodzeHQ`} />
+        <meta name="twitter:creator" content={`@TechTinoe`} />
+        <meta name="twitter:site" content={`@TechTinoe`} />
         <meta name="twitter:card" content="summary_large_image" />
 
         <script
