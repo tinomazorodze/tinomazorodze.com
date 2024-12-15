@@ -1,46 +1,50 @@
-import { createContext, useEffect, useRef } from 'react'
-import { usePathname } from 'next/navigation'
-import { ThemeProvider, useTheme } from 'next-themes'
+"use client";
+
+import { createContext, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import { ThemeProvider, useTheme } from "next-themes";
 
 function usePrevious<T>(value: T) {
-  let ref = useRef<T>()
+  const ref = useRef<T | undefined>(undefined);
 
   useEffect(() => {
-    ref.current = value
-  }, [value])
+    ref.current = value;
+  }, [value]);
 
-  return ref.current
+  return ref.current;
 }
 
 function ThemeWatcher() {
-  let { resolvedTheme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
-    let media = window.matchMedia('(prefers-color-scheme: dark)')
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
 
     function onMediaChange() {
-      let systemTheme = media.matches ? 'dark' : 'light'
+      const systemTheme = media.matches ? "dark" : "light";
       if (resolvedTheme === systemTheme) {
-        setTheme('system')
+        setTheme("system");
       }
     }
 
-    onMediaChange()
-    media.addEventListener('change', onMediaChange)
+    onMediaChange();
+    media.addEventListener("change", onMediaChange);
 
     return () => {
-      media.removeEventListener('change', onMediaChange)
-    }
-  }, [resolvedTheme, setTheme])
+      media.removeEventListener("change", onMediaChange);
+    };
+  }, [resolvedTheme, setTheme]);
 
-  return null
+  return null;
 }
 
-export const AppContext = createContext<{ previousPathname?: string }>({})
+export const AppContext = createContext<{ previousPathname?: string | null }>(
+  {}
+);
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  let pathname = usePathname()
-  let previousPathname = usePrevious(pathname)!
+  const pathname = usePathname();
+  const previousPathname = usePrevious(pathname);
 
   return (
     <AppContext.Provider value={{ previousPathname }}>
@@ -49,5 +53,5 @@ export function Providers({ children }: { children: React.ReactNode }) {
         {children}
       </ThemeProvider>
     </AppContext.Provider>
-  )
+  );
 }

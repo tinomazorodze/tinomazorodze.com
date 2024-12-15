@@ -1,40 +1,40 @@
 type SitemapLocation = {
-  url: string
-  priority: number
-  lastmod?: Date
-}
+  url: string;
+  priority: number;
+  lastmod?: Date;
+};
 
 // Use this to manually add routes to the sitemap
 const defaultUrls: SitemapLocation[] = [
   {
-    url: '/',
+    url: "/",
     priority: 1.0,
-    lastmod: new Date('2024-07-16T07:56:32.687Z'),
+    lastmod: new Date("2024-12-15T08:48:12.687Z"),
   },
   {
-    url: '/about',
+    url: "/about",
     priority: 1.0,
-    lastmod: new Date('2024-07-16T07:56:32.687Z'),
+    lastmod: new Date("2024-12-15T08:48:12.687Z"),
   },
   {
-    url: '/games',
+    url: "/gaming",
     priority: 1.0,
-    lastmod: new Date('2024-07-16T07:56:32.687Z'),
+    lastmod: new Date("2024-12-15T08:48:12.687Z"),
   },
   {
-    url: '/projects',
+    url: "/coding",
     priority: 1.0,
-    lastmod: new Date('2024-07-16T07:56:32.687Z'),
+    lastmod: new Date("2024-12-15T08:48:12.687Z"),
   },
   {
-    url: '/tech',
+    url: "/tech",
     priority: 1.0,
-    lastmod: new Date('2024-07-16T07:56:32.687Z'),
+    lastmod: new Date("2024-12-15T08:48:12.687Z"),
   },
-]
+];
 
 const createSitemap = (locations: SitemapLocation[]) => {
-  const baseUrl = 'https://www.tinomazorodze.com' // Make sure to configure this
+  const baseUrl = "https://www.tinomazorodze.com"; // Make sure to configure this
   return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${locations
@@ -45,29 +45,30 @@ const createSitemap = (locations: SitemapLocation[]) => {
                     ${
                       location.lastmod
                         ? `<lastmod>${location.lastmod.toISOString()}</lastmod>`
-                        : ''
+                        : ""
                     }
-                  </url>`
+                  </url>`;
         })
-        .join('')}
+        .join("")}
   </urlset>
-  `
-}
+  `;
+};
 
 export default function SiteMap() {
   // getServerSideProps will do the heavy lifting
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- dont check
 export async function getServerSideProps({ res }: { res: any }) {
   // Return the default urls, combined with dynamic urls above
-  const locations = [...defaultUrls]
+  const locations = [...defaultUrls];
 
   // Set response to XML
-  res.setHeader('Content-Type', 'text/xml')
-  res.write(createSitemap(locations))
-  res.end()
+  res.setHeader("Content-Type", "text/xml");
+  res.write(createSitemap(locations));
+  res.end();
 
   return {
     props: {},
-  }
+  };
 }
