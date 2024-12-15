@@ -55,7 +55,7 @@ export default function CodingPage() {
           <ArrowTopRightOnSquareIcon className="size-4" />
         </Link>
       </header>
-      <h2 className="mb-12 text-3xl ">Projects I have worked on</h2>
+      <h2 className="mb-12 text-3xl ">Projects I am working on</h2>
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
