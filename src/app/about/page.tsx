@@ -9,6 +9,17 @@ import {
   XIcon,
 } from "@/components/icons/social-icons";
 import portraitImage from "@/images/avatar.png";
+import { preparePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata =>
+  preparePageMetadata({
+    title: "About | Tino Mazorodze",
+    description:
+      "I'm Tino Mazorodze, a programmer and gamer from Zimbabwe. I post about my open source projects and video game experiences and tips on my blog",
+    pageUrl: "/about",
+    imageUrl: "/assets/potrait.png",
+  });
 
 function SocialLink({
   className,

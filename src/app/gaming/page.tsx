@@ -1,6 +1,15 @@
 import { Container } from "@/components/container";
 import Link from "next/link";
 import GameCard from "./_game-card";
+import { preparePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata =>
+  preparePageMetadata({
+    title: "Video Games | TechTinooe",
+    description: "Tips, clips and insights from the midnight gamer",
+    pageUrl: "/gaming",
+  });
 
 export type GameType = {
   name: string;

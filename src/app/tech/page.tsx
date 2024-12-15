@@ -1,6 +1,16 @@
 import { Card } from "../../components/Card";
 import { Section } from "./_section";
 import { Container } from "@/components/container";
+import { preparePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata =>
+  preparePageMetadata({
+    title: "Gadgets and Software Tino Uses",
+    description:
+      "From cutting-edge software to the latest gadgets, explore Tino's personal recommendations and discover the tools that help shape his projects and productivity.",
+    pageUrl: "/tech",
+  });
 
 function ToolsSection({
   children,

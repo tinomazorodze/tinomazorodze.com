@@ -8,6 +8,16 @@ import {
   XfinityProsLogo,
 } from "@/components/icons/logos";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { preparePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
+
+export const generateMetadata = (): Metadata =>
+  preparePageMetadata({
+    title: "Projects | Tino Mazorodze",
+    description:
+      "Discover the programming projects that Tino has poured his heart and soul into, with the aim of improving Zimbabwe.",
+    pageUrl: "/coding",
+  });
 
 const projects = [
   {

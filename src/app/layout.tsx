@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { BaseLayout } from "@/components/layouts/base-layout";
+import { PersonSchema, WebsiteSchema } from "@/lib/schemas";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +27,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="h-full">
+        <WebsiteSchema />
+        <PersonSchema />
         <Providers>
           <div className="flex h-full bg-zinc-50 dark:bg-black">
             <BaseLayout>
