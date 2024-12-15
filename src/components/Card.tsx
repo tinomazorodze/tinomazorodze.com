@@ -26,7 +26,10 @@ export function Card<T extends React.ElementType = "div">({
 
   return (
     <Component
-      className={clsx(className, "group relative flex flex-col items-start")}
+      className={clsx(
+        className,
+        "group relative flex flex-col items-start mx-4 sm:mx-0"
+      )}
     >
       {children}
     </Component>
@@ -39,9 +42,9 @@ Card.Link = function CardLink({
 }: React.ComponentPropsWithoutRef<typeof Link>) {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 sm:scale-95 bg-zinc-50 opacity-90 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 rounded-xl sm:rounded-2xl dark:bg-zinc-800/50" />
       <Link {...props}>
-        <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
+        <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 rounded-xl sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
       </Link>
     </>
@@ -81,7 +84,7 @@ Card.Cta = function CardCta({ children }: { children: React.ReactNode }) {
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
+      className="relative z-10 mt-4 flex items-center text-sm font-medium text-yellow-500"
     >
       {children}
       <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
