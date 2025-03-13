@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Minimalist Personal Site
 
-## Getting Started
+(Inspired by [Leerob](https://leerob.io))
 
-First, run the development server:
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Database**: [Postgres](https://vercel.com/postgres)
+- **Deployment**: [Vercel](https://vercel.com)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
+
+## Running Locally
+
+This application requires Node.js v18.17+.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/leerob/site.git
+cd site
+bun install
+bun run delete # Remove all of my notes
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Optional: Create a `.env.local` file with your `POSTGRES_URL` environment variable to store redirects.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Database Schema
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sql
+CREATE TABLE redirects (
+  id SERIAL PRIMARY KEY,
+  source VARCHAR(255) NOT NULL,
+  destination VARCHAR(255) NOT NULL,
+  permanent BOOLEAN NOT NULL
+);
+```
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+1. You are free to use this code as inspiration.
+2. Please do not copy it directly.
+3. Crediting the author is appreciated.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Please remove all of my personal information by running `bun run delete`.

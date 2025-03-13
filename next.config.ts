@@ -1,21 +1,31 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  pageExtensions: ["mdx", "ts", "tsx"],
   async redirects() {
     return [
       {
-        source: "/projects",
-        destination: "/coding",
+        source: "/tech",
+        destination: "/personal-tech",
         permanent: true,
       },
       {
-        source: "/games",
-        destination: "/gaming",
+        source: "/coding",
+        destination: "/coding-stack",
         permanent: true,
       },
     ];
   },
+
+  // Note: Using the Rust compiler means we cannot use
+  // rehype or remark plugins. For my app, this is fine.
+  experimental: {
+    mdxRs: true,
+    viewTransition: true,
+  },
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);
