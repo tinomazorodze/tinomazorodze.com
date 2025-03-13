@@ -7,12 +7,17 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/tech",
-        destination: "/personal-tech",
+        destination: "/n/personal-tech",
         permanent: true,
       },
       {
         source: "/coding",
-        destination: "/coding-stack",
+        destination: "/n/coding-stack",
+        permanent: true,
+      },
+      {
+        source: "/gaming",
+        destination: "/n/gaming",
         permanent: true,
       },
     ];
