@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/:path*",
+        source: "/((?!$).*)", // excludes just the root "/"
         destination: "/",
         permanent: true,
       },
