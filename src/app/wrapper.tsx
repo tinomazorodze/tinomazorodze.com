@@ -72,9 +72,9 @@ export default function HomeWrapper() {
                 Daylight Programmer
               </h1>
               <p className="text-slate-600 text-sm md:text-lg leading-relaxed px-4 md:px-0">
-                Crafting clean code and building digital solutions when the sun
-                shines bright. Passionate about creating efficient, scalable
-                applications.
+                During the day I work on various projects, turning ideas into
+                reality. Anything is possible with code! Vibe coding sucks (kill
+                me), but I do use AI tools sometimes.
               </p>
             </div>
 
@@ -177,9 +177,9 @@ export default function HomeWrapper() {
                 Midnight Gamer
               </h1>
               <p className="text-purple-200 text-sm md:text-lg leading-relaxed px-4 md:px-0">
-                When darkness falls, the real adventure begins. Conquering
-                virtual worlds and mastering digital challenges under the
-                moonlight.
+                At night I cool down with some gaming sessions, grinding,
+                exploring and just having fun on online multiplayer games. Hit
+                me up if you play any of these!
               </p>
             </div>
 
