@@ -195,7 +195,7 @@ function Photos() {
         {[
           {
             src: image1,
-            alt: 'Tino and his girlfriend',
+            alt: 'Tino Mazorodze and girlfriend Blessing Kusiwani in 2026',
           },
           {
             src: image2,
