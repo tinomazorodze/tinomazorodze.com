@@ -1,16 +1,19 @@
-import type { NextConfig } from "next";
+import nextMDX from "@next/mdx";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  async redirects() {
-    return [
-      {
-        source: "/n/personal-tech",
-        destination: "/",
-        permanent: true,
-      },
-    ];
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
+  outputFileTracingIncludes: {
+    "/articles/*": ["./src/app/articles/**/*.mdx"],
   },
 };
 
-export default nextConfig;
+const withMDX = nextMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: ["remark-gfm"],
+    rehypePlugins: ["@mapbox/rehype-prism"],
+  },
+});
+
+export default withMDX(nextConfig);

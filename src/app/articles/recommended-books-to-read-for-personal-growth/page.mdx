@@ -1,0 +1,56 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import imageSrc1 from './frame-1.png'
+import imageSrc2 from './frame-2.png'
+import imageSrc3 from './frame-3.png'
+import imageSrc4 from './frame-4.png'
+import imageSrc5 from './frame-5.png'
+import imageSrc6 from './frame-6.png'
+import imageSrc7 from './frame-7.png'
+import imageSrc8 from './frame-8.png'
+
+export const article = {
+  author: 'Tino Mazorodze',
+  date: '2026-04-15',
+  title: 'Recommended Books to Read for Personal Growth',
+  description:
+    'I am not a big fan of reading books but that are a couple of books I have read that I have found to be very helpful for personal growth and I thought it would be a good idea to share them with you all.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image src={imageSrc1} alt="Recommended Books for Personal Growth" />
+
+I am not a big fan of reading books but that are a couple of books I have read that I have found to be very helpful for personal growth and I thought it would be a good idea to share them with you all.
+
+## The War of Art
+
+<Image src={imageSrc2} alt="The War of Art" />
+
+## the Millionaire Fastlane
+
+<Image src={imageSrc3} alt="the Millionaire Fastlane" />
+
+## Steal Like an Artist
+
+<Image src={imageSrc4} alt="Steal Like an Artist" />
+
+## Make it Stick
+
+<Image src={imageSrc5} alt="Make it Stick" />
+
+## How successful people think
+
+<Image src={imageSrc6} alt="How successful people think" />
+
+## The Subtle Art of Not Giving a F\*ck
+
+<Image src={imageSrc7} alt="The Subtle Art of Not Giving a F*ck" />
+
+## The Psychology of Money
+
+<Image src={imageSrc8} alt="The Psychology of Money" />

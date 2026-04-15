@@ -1,36 +1,38 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import "./globals.css";
-import { UglyStamp } from "./ugly-stamp";
+import { type Metadata } from 'next'
 
-const inter = Inter({ subsets: ["latin"] });
+import { Providers } from '@/app/providers'
+import { Layout } from '@/components/Layout'
+
+import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tinomazorodze.com"),
-  alternates: {
-    canonical: "/",
-  },
   title: {
-    default: "Tino Mazorodze",
-    template: "%s | Tino Mazorodze",
+    template: '%s - Tino Mazorodze',
+    default: 'Tino Mazorodze - Software developer, gamer, and tech enthusiast',
   },
   description:
-    "Daylight programmer (NextJS, React Native, Typescript), Midnight gamer (Dota 2, Euro Trucks, Albion Online).",
-};
+    'I’m Tino, a software developer, gamer, and tech enthusiast based in Harare, Zimbabwe. I’m the current CEO of Xfinity Pros, the makers of IBZIM.',
+  alternates: {
+    types: {
+      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
+    },
+  },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased relative`}>
-        <UglyStamp />
-        {children}
-        <Analytics />
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <body className="flex h-full bg-zinc-50 dark:bg-black">
+        <Providers>
+          <div className="flex w-full">
+            <Layout>{children}</Layout>
+          </div>
+        </Providers>
       </body>
     </html>
-  );
+  )
 }
