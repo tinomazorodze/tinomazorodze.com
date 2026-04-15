@@ -2,8 +2,11 @@ import { type Metadata } from 'next'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from '@vercel/analytics/react'
 
 import '@/styles/tailwind.css'
+import { env } from '@/env'
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +35,8 @@ export default function RootLayout({
             <Layout>{children}</Layout>
           </div>
         </Providers>
+        <Analytics />
+        <GoogleAnalytics gaId={env.GA_SECRET!} />
       </body>
     </html>
   )
