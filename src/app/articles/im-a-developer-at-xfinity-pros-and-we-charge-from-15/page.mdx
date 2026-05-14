@@ -1,0 +1,27 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import imageSrc from './fr.png'
+
+export const article = {
+  author: 'Tino Mazorodze',
+  date: '2026-05-14',
+  title: 'I am a developer at Xfinity Pros and we charge from $15 once off',
+  description:
+    'For 3 years now I have been a web developer at Xfinity Pros and we have been charging from as little as $15 once off for our web development services.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+For 3 years now I have been a web developer at [Xfinity Pros](https://www.xfinitypros.com) and the cheapest contract we have ever had was for $15 once off for a one-page template website.
+
+<Image src={imageSrc} alt="Xfinity Pros $15 website contract" />
+
+The website is nolonger live now as the client only wanted it for a short time. In cases like these you can see why the price was so low.
+
+At Xfinity Pros we understand that not everyone has the budget for a custom web solution and that is why we offer extremely cheap website design services when the client only needs a simple website. We also offer more expensive custom web solutions for clients who need more complex websites.
+
+I made a tool for [calculating the cost of a website](https://www.xfinitypros.com/website-cost-calculator) based on the features that the client wants and the time it will take to develop the website. You can try it out to get a fair price estimate for your website project.

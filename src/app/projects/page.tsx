@@ -6,11 +6,20 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import logoXfinityPros from '@/images/logos/xfinity-pros.svg'
 import logoIBZim from '@/images/logos/ibzim.svg'
 import logoZimDevelopersLab from '@/images/logos/zimdevelopers.svg'
+import logoIBSA from '@/images/logos/ibsa.svg'
+import logoReturners from '@/images/logos/returners.svg'
+import logoPeyaPeya from '@/images/logos/peyapeya.svg'
 
 const projects = [
   {
+    name: 'Returners Online',
+    description: 'A free-to-play social MMORPG video game built with Unity.',
+    link: { href: 'https://www.returners.online', label: 'returners.online' },
+    logo: logoReturners,
+  },
+  {
     name: 'Xfinity Pros',
-    description: 'A software development and acquisition company.',
+    description: 'A contract web development agency for custom web solutions.',
     link: { href: 'https://www.xfinitypros.com', label: 'xfinitypros.com' },
     logo: logoXfinityPros,
   },
@@ -27,6 +36,18 @@ const projects = [
       'A community of software developers and tech enthusiasts in Zimbabwe.',
     link: { href: 'https://www.zimdevelopers.com', label: 'zimdevelopers.com' },
     logo: logoZimDevelopersLab,
+  },
+  {
+    name: 'Peya Peya',
+    description: 'Online payment processing gateway and API services.',
+    link: { href: 'https://www.peyapeya.com', label: 'peyapeya.com' },
+    logo: logoPeyaPeya,
+  },
+  {
+    name: 'IBSA',
+    description: 'A information hub for all things about South Africa.',
+    link: { href: 'https://www.ibsa.co.za', label: 'ibsa.co.za' },
+    logo: logoIBSA,
   },
 ]
 

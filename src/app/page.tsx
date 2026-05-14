@@ -278,6 +278,7 @@ export default async function Home() {
       <Container className="mt-12 md:mt-14">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
+            <h2 className="text-3xl">My Blog</h2>
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
