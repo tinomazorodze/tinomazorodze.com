@@ -105,7 +105,8 @@ export default function About() {
             <p>
               Today, I’m the founder and current CEO of{' '}
               <Link href="https://www.xfinitypros.com">Xfinity Pros</Link>,
-              where we’re working on building neat software products like IBZIM
+              where we’re working on building neat software products like{' '}
+              <Link href="https://www.ibzim.com">IBZIM</Link>
               our current project.
             </p>
           </div>
