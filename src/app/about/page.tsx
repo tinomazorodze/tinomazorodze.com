@@ -104,9 +104,19 @@ export default function About() {
             </p>
             <p>
               Today, I’m the founder and current CEO of{' '}
-              <Link href="https://www.xfinitypros.com">Xfinity Pros</Link>,
-              where we’re working on building neat software products like{' '}
-              <Link href="https://www.ibzim.com">IBZIM</Link>
+              <Link
+                href="https://www.xfinitypros.com"
+                className="text-[#008080] underline decoration-dotted hover:text-[#065252]"
+              >
+                Xfinity Pros
+              </Link>
+              , where we’re working on building neat software products like{' '}
+              <Link
+                href="https://www.ibzim.com"
+                className="text-[#008080] underline decoration-dotted hover:text-[#065252]"
+              >
+                IBZIM
+              </Link>{' '}
               our current project.
             </p>
           </div>
