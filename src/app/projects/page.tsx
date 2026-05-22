@@ -71,7 +71,7 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of and continue to maintain inorder to reach new heights. If you want to collaborate on projects of your own feel free to reach out and let me know 😊."
+      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of and continue to maintain inorder to reach new heights. If you want to collaborate on projects of your own feel free to reach on any of my socials pinned below and let me know 😊."
     >
       <ul
         role="list"
