@@ -30,7 +30,8 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "src/app/articles/most-entertaining-youtube-channels-for-developers/page.mdx",
-    "src/app/articles/my-top-10-favourite-anime-of-all-time/page.mdx"
+    "src/app/articles/my-top-10-favourite-anime-of-all-time/page.mdx",
+    "src/app/articles/my-gold-only-forex-trading-experiment-in-zimbabwe-2026/page.mdx"
   ],
   "exclude": ["node_modules"]
 }
